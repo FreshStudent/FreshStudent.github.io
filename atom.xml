@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://FreshStudent.github.io</id>
     <title>To Be Top~</title>
-    <updated>2019-06-17T06:37:10.275Z</updated>
+    <updated>2019-06-17T06:58:18.596Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://FreshStudent.github.io"/>
     <link rel="self" href="http://FreshStudent.github.io/atom.xml"/>
@@ -10,24 +10,6 @@
     <logo>http://FreshStudent.github.io/images/avatar.png</logo>
     <icon>http://FreshStudent.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, To Be Top~</rights>
-    <entry>
-        <title type="html"><![CDATA[testPict]]></title>
-        <id>http://FreshStudent.github.io/post/testpict</id>
-        <link href="http://FreshStudent.github.io/post/testpict">
-        </link>
-        <updated>2019-06-17T06:26:46.000Z</updated>
-        <content type="html"><![CDATA[<p>是卡了</p>
-<p>阿卡丽束带结发</p>
-<p>啊速度快了发将卡洛斯fsadf'</p>
-<p>sadfasdf‘</p>
-<p>圣诞快乐九分裤</p>
-<p>卡多了几分；</p>
-<p>雷克萨单机菲洛可；l</p>
-<p><img src="http://FreshStudent.github.io/post-images/image-20190617143654406.png" alt="image-20190617143654406"></p>
-<p>收到了开发局； 斯柯达辣椒粉</p>
-<p><img src="http://FreshStudent.github.io/post-images/image-20190617142617055.png" alt="自定义配置主题"></p>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[购买搬瓦工vps]]></title>
         <id>http://FreshStudent.github.io/post/gou-mai-ban-wa-gong-vps</id>
@@ -263,8 +245,8 @@ samp     23041 16786  0 09:56 pts/0    00:00:00 grep 19011
 <p>做了以下验证步骤：</p>
 </blockquote>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6465896"> ssh进入tomcat的bin目录下手动重启Tomcat --&gt; 原来项目A（jdk1.8）可以正常启动。  【<strong>排除shell脚本问题</strong><label class="task-list-item-label" for="task-item-6465896"> ssh进入tomcat的bin目录下手动重启Tomcat --> 原来项目A（jdk1.8）可以正常启动。  【**排除shell脚本问题**】</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2791901"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --&gt; 项目可以正常启动。   【<strong>排除tomcat配置问题</strong><label class="task-list-item-label" for="task-item-2791901"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --> 项目可以正常启动。   【**排除tomcat配置问题**】</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5290901"> ssh进入tomcat的bin目录下手动重启Tomcat --&gt; 原来项目A（jdk1.8）可以正常启动。  【<strong>排除shell脚本问题</strong><label class="task-list-item-label" for="task-item-5290901"> ssh进入tomcat的bin目录下手动重启Tomcat --> 原来项目A（jdk1.8）可以正常启动。  【**排除shell脚本问题**】</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2518796"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --&gt; 项目可以正常启动。   【<strong>排除tomcat配置问题</strong><label class="task-list-item-label" for="task-item-2518796"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --> 项目可以正常启动。   【**排除tomcat配置问题**】</label></li>
 </ul>
 <h4 id="排除了shell脚本-tomcat配置问题那估计就是环境问题了">排除了shell脚本、tomcat配置问题，那估计就是环境问题了？</h4>
 <blockquote>
