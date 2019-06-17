@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" >
 
-<title>jenkins+gitLib+maven+SSh+war | Gridea</title>
+<title>jenkins+gitLib+maven+SSh+war 自动化远程构建war包 | Gridea</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="http://FreshStudent.github.io/favicon.ico?v=1560743288300">
+<link rel="shortcut icon" href="http://FreshStudent.github.io/favicon.ico?v=1560743642411">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="http://FreshStudent.github.io/styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="http://FreshStudent.github.io">
-        <img src="http://FreshStudent.github.io/images/avatar.png?v=1560743288300" class="site-logo">
+        <img src="http://FreshStudent.github.io/images/avatar.png?v=1560743642411" class="site-logo">
         <h1 class="site-title">Gridea</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -92,14 +92,11 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">jenkins+gitLib+maven+SSh+war</h2>
+            <h2 class="post-title">jenkins+gitLib+maven+SSh+war 自动化远程构建war包</h2>
             <div class="post-date">2018-05-15</div>
             
             <div class="post-content">
-              <h1 id="jenkinsgitlibmavensshwar-自动化远程构建war包">jenkins+gitLib+maven+SSh+war 自动化远程构建war包</h1>
-<hr>
-<p>公司一直都是手动发布war包的，这里有一个问题，人为的操作是很容易出现问题的，于是想到用jenkins来进行发布war包，减少人工参与</p>
-<hr>
+              <p>公司一直都是手动发布war包的，这里有一个问题，人为的操作是很容易出现问题的，于是想到用jenkins来进行发布war包，减少人工参与</p>
 <!--more-->
 <h2 id="一-安装jenkins常规操作过程不表">一、安装jenkins（常规操作过程不表）</h2>
 <p>启动jenkins，修改默认端口号（8080）启动</p>
@@ -179,7 +176,7 @@ Gitlib相关参数配置
 <li>
 <p>Publish over SSH<br>
 利用SSH，将文件复制到远程服务器特定文件夹中，并且可以执行自定义shell脚本。
-{% asset_img publishOverSSHSetting.png 利用SSH，将文件复制到远程服务器特定文件夹中，并且可以执行自定义shell脚本 %}</p>
+<img src="http://FreshStudent.github.io/post-images/publishOverSSHSetting.png" alt="利用SSH，将文件复制到远程服务器特定文件夹中，并且可以执行自定义shell脚本"></p>
 </li>
 </ul>
 <ol start="2">
@@ -188,7 +185,6 @@ Gitlib相关参数配置
 <ul>
 <li>Maven<br>
 配置打包gitlib代码的相关命令。<br>
-{% asset_img MavenSetting.png 配置打包gitlib代码的相关命令。 %}
 <img src="http://FreshStudent.github.io/post-images/MavenSetting.png" alt="配置打包gitlib代码的相关命令"></li>
 </ul>
 <ol start="3">

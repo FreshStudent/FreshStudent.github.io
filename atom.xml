@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://FreshStudent.github.io</id>
     <title>Gridea</title>
-    <updated>2019-06-17T03:48:10.538Z</updated>
+    <updated>2019-06-17T03:54:05.807Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://FreshStudent.github.io"/>
     <link rel="self" href="http://FreshStudent.github.io/atom.xml"/>
@@ -234,10 +234,7 @@ X   JSP需求需要优先开发（任务完成X）</p>
         <link href="http://FreshStudent.github.io/post/JenkinsAndSSHStartTomcat">
         </link>
         <updated>2018-08-21T06:20:09.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="jenkins启动tomcat与ssh启动区别">Jenkins启动tomcat与SSH启动区别</h1>
-<blockquote>
-<p>自动构建的Jenkins利用push over ssh 插件，将生成好的war包，远程发布到服务器中，并且利用bin/startup.sh启动Tomcat，发现Tomcat启动了(6-7s),正常加载项目后是需要10s左右的启动时间，但是项目却没有成功。</p>
-</blockquote>
+        <content type="html"><![CDATA[<p>自动构建的Jenkins利用push over ssh 插件，将生成好的war包，远程发布到服务器中，并且利用bin/startup.sh启动Tomcat，发现Tomcat启动了(6-7s),正常加载项目后是需要10s左右的启动时间，但是项目却没有成功。</p>
 <h4 id="启动失败时候的tomcat信息">启动失败时候的Tomcat信息：</h4>
 <pre><code class="language-java">
 [samp@tset-flow2 ~]$ ps -ef|grep 19011
@@ -248,8 +245,8 @@ samp     23041 16786  0 09:56 pts/0    00:00:00 grep 19011
 <p>做了以下验证步骤：</p>
 </blockquote>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7189975"> ssh进入tomcat的bin目录下手动重启Tomcat --&gt; 原来项目A（jdk1.8）可以正常启动。  【<strong>排除shell脚本问题</strong><label class="task-list-item-label" for="task-item-7189975"> ssh进入tomcat的bin目录下手动重启Tomcat --> 原来项目A（jdk1.8）可以正常启动。  【**排除shell脚本问题**】</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8927896"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --&gt; 项目可以正常启动。   【<strong>排除tomcat配置问题</strong><label class="task-list-item-label" for="task-item-8927896"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --> 项目可以正常启动。   【**排除tomcat配置问题**】</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8759494"> ssh进入tomcat的bin目录下手动重启Tomcat --&gt; 原来项目A（jdk1.8）可以正常启动。  【<strong>排除shell脚本问题</strong><label class="task-list-item-label" for="task-item-8759494"> ssh进入tomcat的bin目录下手动重启Tomcat --> 原来项目A（jdk1.8）可以正常启动。  【**排除shell脚本问题**】</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8904316"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --&gt; 项目可以正常启动。   【<strong>排除tomcat配置问题</strong><label class="task-list-item-label" for="task-item-8904316"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --> 项目可以正常启动。   【**排除tomcat配置问题**】</label></li>
 </ul>
 <h4 id="排除了shell脚本-tomcat配置问题那估计就是环境问题了">排除了shell脚本、tomcat配置问题，那估计就是环境问题了？</h4>
 <blockquote>
@@ -380,20 +377,14 @@ JAVA_OPTS=&quot;-Xms512m -Xmx2048m&quot;
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[jenkins+gitLib+maven+SSh+war]]></title>
+        <title type="html"><![CDATA[jenkins+gitLib+maven+SSh+war 自动化远程构建war包]]></title>
         <id>http://FreshStudent.github.io/post/jenkins-gitLib-maven-SSh-war</id>
         <link href="http://FreshStudent.github.io/post/jenkins-gitLib-maven-SSh-war">
         </link>
         <updated>2018-05-15T02:40:09.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="jenkinsgitlibmavensshwar-自动化远程构建war包">jenkins+gitLib+maven+SSh+war 自动化远程构建war包</h1>
-<hr>
-<p>公司一直都是手动发布war包的，这里有一个问题，人为的操作是很容易出现问题的，于是想到用jenkins来进行发布war包，减少人工参与</p>
-<hr>
+        <summary type="html"><![CDATA[<p>公司一直都是手动发布war包的，这里有一个问题，人为的操作是很容易出现问题的，于是想到用jenkins来进行发布war包，减少人工参与</p>
 ]]></summary>
-        <content type="html"><![CDATA[<h1 id="jenkinsgitlibmavensshwar-自动化远程构建war包">jenkins+gitLib+maven+SSh+war 自动化远程构建war包</h1>
-<hr>
-<p>公司一直都是手动发布war包的，这里有一个问题，人为的操作是很容易出现问题的，于是想到用jenkins来进行发布war包，减少人工参与</p>
-<hr>
+        <content type="html"><![CDATA[<p>公司一直都是手动发布war包的，这里有一个问题，人为的操作是很容易出现问题的，于是想到用jenkins来进行发布war包，减少人工参与</p>
 <!--more-->
 <h2 id="一-安装jenkins常规操作过程不表">一、安装jenkins（常规操作过程不表）</h2>
 <p>启动jenkins，修改默认端口号（8080）启动</p>
@@ -473,7 +464,7 @@ Gitlib相关参数配置
 <li>
 <p>Publish over SSH<br>
 利用SSH，将文件复制到远程服务器特定文件夹中，并且可以执行自定义shell脚本。
-{% asset_img publishOverSSHSetting.png 利用SSH，将文件复制到远程服务器特定文件夹中，并且可以执行自定义shell脚本 %}</p>
+<img src="http://FreshStudent.github.io/post-images/publishOverSSHSetting.png" alt="利用SSH，将文件复制到远程服务器特定文件夹中，并且可以执行自定义shell脚本"></p>
 </li>
 </ul>
 <ol start="2">
@@ -482,7 +473,6 @@ Gitlib相关参数配置
 <ul>
 <li>Maven<br>
 配置打包gitlib代码的相关命令。<br>
-{% asset_img MavenSetting.png 配置打包gitlib代码的相关命令。 %}
 <img src="http://FreshStudent.github.io/post-images/MavenSetting.png" alt="配置打包gitlib代码的相关命令"></li>
 </ul>
 <ol start="3">
@@ -710,8 +700,7 @@ removeBackUpFiles
 <h3 id="购买域名">购买域名</h3>
 <p><img src="http://FreshStudent.github.io/post-images/aliyunBuy.png" alt="购买选中的域名"></p>
 <h3 id="查找博客对应的ip用于映射">查找博客对应的IP，用于映射</h3>
-<p>{% asset_img findGitHubIOIpAddress.png 查找gitHubIO中对应的IP地址 %}
-<img src="http://FreshStudent.github.io/post-images/findGitHubIOIpAddress.png" alt="查找gitHubIO中对应的IP地址"></p>
+<p><img src="http://FreshStudent.github.io/post-images/findGitHubIOIpAddress.png" alt="查找gitHubIO中对应的IP地址"></p>
 <h3 id="域名解析">域名解析</h3>
 <p><img src="http://FreshStudent.github.io/post-images/aliyunSiteToYourWebStep1.png" alt="将域名与GitHub捆绑起来">
 <img src="http://FreshStudent.github.io/post-images/aliyunSiteToYourWebStep2.png" alt="将域名与GitHub捆绑起来"></p>
@@ -722,7 +711,7 @@ removeBackUpFiles
 <pre><code>Linux code ：touch CNAME
 </code></pre>
 <p><strong>ps：如果没有在本地source文件夹中创建CNAME文件，则每次提交（hexo g -d）后，域名映射会失效。</strong><br>
-{% asset_img creatLocalCNAMEFile.png 将域名与GitHub捆绑起来 %}</p>
+<img src="http://FreshStudent.github.io/post-images/creatLocalCNAMEFile.png" alt="将域名与GitHub捆绑起来"></p>
 <blockquote>
 <p>Done！</p>
 </blockquote>

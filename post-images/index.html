@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html>
+    <!-- title -->
+
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
+    <meta name="author" content="MR Lee">
+    <meta name="renderer" content="webkit">
+    <meta name="copyright" content="MR Lee">
+    <meta name="keywords" content="Hexo | MR Lee">
+    <meta name="description" content="">
+    <meta name="Cache-Control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>jenkins+gitLib+maven+SSh+war · Mr.Lee&#39;s Studio</title>
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s 1;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+</style>
+
+    <link rel="preload" href= /css/style.css?v=20180501 as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="stylesheet" href= /css/mobile.css?v=20180501 media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+        
+    <script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+(function(w){
+	"use strict";
+	/* exported loadCSS */
+	var loadCSS = function( href, before, media ){
+		// Arguments explained:
+		// `href` [REQUIRED] is the URL for your CSS file.
+		// `before` [OPTIONAL] is the element the script should use as a reference for injecting our stylesheet <link> before
+		// By default, loadCSS attempts to inject the link after the last stylesheet or script in the DOM. However, you might desire a more specific location in your document.
+		// `media` [OPTIONAL] is the media type or query of the stylesheet. By default it will be 'all'
+		var doc = w.document;
+		var ss = doc.createElement( "link" );
+		var ref;
+		if( before ){
+			ref = before;
+		}
+		else {
+			var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+			ref = refs[ refs.length - 1];
+		}
+
+		var sheets = doc.styleSheets;
+		ss.rel = "stylesheet";
+		ss.href = href;
+		// temporarily set media to something inapplicable to ensure it'll fetch without blocking render
+		ss.media = "only x";
+
+		// wait until body is defined before injecting link. This ensures a non-blocking load in IE11.
+		function ready( cb ){
+			if( doc.body ){
+				return cb();
+			}
+			setTimeout(function(){
+				ready( cb );
+			});
+		}
+		// Inject link
+			// Note: the ternary preserves the existing behavior of "before" argument, but we could choose to change the argument to "after" in a later release and standardize on ref.nextSibling for all refs
+			// Note: `insertBefore` is used instead of `appendChild`, for safety re: http://www.paulirish.com/2011/surefire-dom-element-insertion/
+		ready( function(){
+			ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+		});
+		// A method (exposed on return object for external use) that mimics onload by polling document.styleSheets until it includes the new sheet.
+		var onloadcssdefined = function( cb ){
+			var resolvedHref = ss.href;
+			var i = sheets.length;
+			while( i-- ){
+				if( sheets[ i ].href === resolvedHref ){
+					return cb();
+				}
+			}
+			setTimeout(function() {
+				onloadcssdefined( cb );
+			});
+		};
+
+		function loadCB(){
+			if( ss.addEventListener ){
+				ss.removeEventListener( "load", loadCB );
+			}
+			ss.media = media || "all";
+		}
+
+		// once loaded, set link's media back to `all` so that the stylesheet applies once it loads
+		if( ss.addEventListener ){
+			ss.addEventListener( "load", loadCB);
+		}
+		ss.onloadcssdefined = onloadcssdefined;
+		onloadcssdefined( loadCB );
+		return ss;
+	};
+	// commonjs
+	if( typeof exports !== "undefined" ){
+		exports.loadCSS = loadCSS;
+	}
+	else {
+		w.loadCSS = loadCSS;
+	}
+}( typeof global !== "undefined" ? global : this ));
+</script>
+    <link rel="icon" href= "/assets/Atm.ico" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script" />    
+    <link rel="preload" href="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js" as="script" />
+    <link rel="preload" href="/scripts/main.js" as="script" />
+    <link rel="preload" as="font" href="/font/Oswald-Regular.ttf" crossorigin>
+    <link rel="preload" as="font" href="//at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" crossorigin>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+</head>
+
+    
+        <body class="post-body">
+    
+    
+<header class="header">
+
+    <div class="read-progress"></div>
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Mr.Lee&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">jenkins+gitLib+maven+SSh+war</a>
+            </div>
+    </div>
+    
+    <a class="home-link" href=/>Mr.Lee's Studio.</a>
+</header>
+    <div class="wrapper">
+        <div class="site-intro" style=
+
+
+
+
+
+
+
+
+height:50vh;
+
+>
+    
+    <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
+            
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            jenkins+gitLib+maven+SSh+war
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/05/15</span>
+                
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe602;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                    <span class="shareText">Share</span>
+                    <ul class="shareList">
+                        <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                            <div class="share-qrcode"></div>
+                        </li>
+                        <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                        <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                        <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                        <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                    </ul>
+                </span>
+            </div>
+        
+    </div>
+</div>
+        <script>
+  // load webfont-loader async, and add callback function
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+  
+  // get user agent
+  var browser = {
+    versions: function () {
+      var u = window.navigator.userAgent;
+      return {
+        userAgent: u,
+        trident: u.indexOf('Trident') > -1, //IE内核
+        presto: u.indexOf('Presto') > -1, //opera内核
+        webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+        mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+        iPad: u.indexOf('iPad') > -1, //是否为iPad
+        webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+        weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+        uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
+      };
+    }()
+  }
+  console.log("userAgent:" + browser.versions.userAgent);
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded');
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
+      document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
+      var postIntroTags = document.getElementsByClassName('post-intro-tags')[0],
+        postIntroMeat = document.getElementsByClassName('post-intro-meta')[0];
+      if (postIntroTags) {
+        postIntroTags.classList.add('post-fade-in');
+      }
+      if (postIntroMeat) {
+        postIntroMeat.classList.add('post-fade-in');
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb(){
+    if (browser.versions.uc) {
+      console.log("UCBrowser");
+      fontLoaded();
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular']
+        },
+        loading: function () {  //所有字体开始加载
+          // console.log('loading');
+        },
+        active: function () {  //所有字体已渲染
+          fontLoaded();
+        },
+        inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout');
+          fontLoaded();
+        },
+        timeout: 5000 // Set the timeout to two seconds
+      });
+    }
+  }
+
+  async("https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js", asyncCb)
+</script>        
+        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+        <div class="container container-unloaded">
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="jenkins-gitLib-maven-SSh-war-自动化远程构建war包"><a href="#jenkins-gitLib-maven-SSh-war-自动化远程构建war包" class="headerlink" title="jenkins+gitLib+maven+SSh+war 自动化远程构建war包"></a>jenkins+gitLib+maven+SSh+war 自动化远程构建war包</h1><hr>
+<p>公司一直都是手动发布war包的，这里有一个问题，人为的操作是很容易出现问题的，于是想到用jenkins来进行发布war包，减少人工参与  </p>
+<hr>
+<a id="more"></a>
+<h2 id="一、安装jenkins（常规操作过程不表）"><a href="#一、安装jenkins（常规操作过程不表）" class="headerlink" title="一、安装jenkins（常规操作过程不表）"></a>一、安装jenkins（常规操作过程不表）</h2><p>启动jenkins，修改默认端口号（8080）启动</p>
+<ol>
+<li><p>打开终端，cd 到Jenkins的安装目录（即jenkins.war所在目录），如：D:\Program Files (x86)\Jenkins</p>
+</li>
+<li><p>执行命令：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -jar jenkins.war --ajp13Port=-1 --httpPort=9999</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="二、需要安装jenkins插件："><a href="#二、需要安装jenkins插件：" class="headerlink" title="二、需要安装jenkins插件："></a>二、需要安装jenkins插件：</h2><h3 id="1、集成GitLab插件"><a href="#1、集成GitLab插件" class="headerlink" title="1、集成GitLab插件"></a>1、集成GitLab插件</h3><p><strong>GitLab Plugin</strong><br>This plugin integrates GitLab to Jenkins by faking a GitLab CI Server.</p>
+<p>用于：<br>    需要配置gitlib中的private Key等相关配置。</p>
+<h3 id="2、构建Maven项目需要用到的插件"><a href="#2、构建Maven项目需要用到的插件" class="headerlink" title="2、构建Maven项目需要用到的插件"></a>2、构建Maven项目需要用到的插件</h3><p><strong>Maven Integration plugin</strong><br>This plug-in provides, for better and for worse, a deep integration of Jenkins and Maven: Automatic triggers between projects depending on SNAPSHOTs, automated configuration of various Jenkins publishers (Junit, …).</p>
+<p>用于：<br>    指向本地的相关maven所在，用于打包命令。</p>
+<h3 id="3、发布远程war包的，将war包发送到远程Tomcat中"><a href="#3、发布远程war包的，将war包发送到远程Tomcat中" class="headerlink" title="3、发布远程war包的，将war包发送到远程Tomcat中"></a>3、发布远程war包的，将war包发送到远程Tomcat中</h3><blockquote>
+<p>【注意！！！！！！！！】这种方法已经弃用，因为tomcat的自动发布功能经常出现故障，导致发布失败。</p>
+</blockquote>
+<p><del><strong>Deploy to container Plugin</strong></del><br><del>This plugin allows you to deploy a war to a container after a successful build.<br>Glassfish 3.x remote deployment</del></p>
+<p><del>目的：</del><br>    <del>指定jenkins服务器中的war包路径，通过配置tomcat目录下的tomcat-users.xml文件可以实现远程发布war包到指定路径。但是这里有一个问题，需要启动远程tomcat才可以成功提交，觉得这种方式不是很靠谱，想换一种基于shell命令的方式进行的项目部署。</del></p>
+<h3 id="4、将本地war包上传到远端服务器，然后执行shell脚本"><a href="#4、将本地war包上传到远端服务器，然后执行shell脚本" class="headerlink" title="4、将本地war包上传到远端服务器，然后执行shell脚本"></a>4、将本地war包上传到远端服务器，然后执行shell脚本</h3><p><strong>Publish over SSH</strong></p>
+<h3 id="5、远程运行shell脚本"><a href="#5、远程运行shell脚本" class="headerlink" title="5、远程运行shell脚本"></a>5、远程运行shell脚本</h3><p>SSH<br>配置在远程tomcat中可以执行的shell脚本命令</p>
+<h2 id="三、相关步骤"><a href="#三、相关步骤" class="headerlink" title="三、相关步骤"></a>三、相关步骤</h2><h3 id="3-1-jenkins启动"><a href="#3-1-jenkins启动" class="headerlink" title="3.1 jenkins启动"></a>3.1 jenkins启动</h3><ol>
+<li><p>启动jenkins<br>由于我是使用homebrew来安装jenkins的，需要在终端中输入代码：</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew info jenkins</div></pre></td></tr></table></figure>
+</li>
+<li><p>打开终端，cd 到Jenkins的安装目录（即jenkins.war所在目录）</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd /usr/local/Cellar/jenkins/2.102/libexec</div></pre></td></tr></table></figure>
+</li>
+<li><p>启动jenkins，修改默认端口号（8080）启动，执行命令：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -jar jenkins.war --ajp13Port=-1 --httpPort=9999</div></pre></td></tr></table></figure>
+</li>
+<li><p>输入url，访问jenkins：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://localhost:9999</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="3-2-jenkins-配置"><a href="#3-2-jenkins-配置" class="headerlink" title="3.2 jenkins 配置"></a>3.2 jenkins 配置</h3><h4 id="3-2-1-系统管理"><a href="#3-2-1-系统管理" class="headerlink" title="3.2.1 系统管理"></a>3.2.1 系统管理</h4><ol>
+<li>系统设置：全局设置&amp;路径。</li>
+</ol>
+<ul>
+<li><p>SSH remote hosts<br>配置远端SSH连接相关参数<br>填写相关参数后，需要点击“check connection”按钮检查是否能成功连通。</p>
+<img src="/2018/05/15/jenkins-gitLib-maven-SSh-war/SSHremotehostsSetting.png" title="配置远端SSH连接相关参数">  
+</li>
+<li><p>Gitlab<br>Gitlib相关参数配置<br>这一步需要填写gitLib中的相关参数，复制过来。</p>
+<img src="/2018/05/15/jenkins-gitLib-maven-SSh-war/GitlabSetting.png" title="配置gitLib中的相关参数">
+</li>
+<li><p>Publish over SSH<br>利用SSH，将文件复制到远程服务器特定文件夹中，并且可以执行自定义shell脚本。</p>
+<img src="/2018/05/15/jenkins-gitLib-maven-SSh-war/publishOverSSHSetting.png" title="利用SSH，将文件复制到远程服务器特定文件夹中，并且可以执行自定义shell脚本">
+</li>
+</ul>
+<ol>
+<li>全局工具配置： 工具配置，包括他们的位置和自动安装器。</li>
+</ol>
+<ul>
+<li>Maven<br>  配置打包gitlib代码的相关命令。  <img src="/2018/05/15/jenkins-gitLib-maven-SSh-war/MavenSetting.png" title="配置打包gitlib代码的相关命令。">
+</li>
+</ul>
+<ol>
+<li>管理插件：添加、删除、禁用或启用Jenkins功能扩展插件。<br>使用的插件：</li>
+</ol>
+<ul>
+<li><p>Git Parameter Plug-In<br>Adds ability to choose from git repository revisions or tags。</p>
+</li>
+<li><p>GitLab Plugin<br>This plugin integrates GitLab to Jenkins by faking a GitLab CI Server.</p>
+</li>
+<li><p>Publish Over SSH<br>Send build artifacts over SSH</p>
+</li>
+<li><p>Maven Integration plugin<br>This plug-in provides, for better and for worse, a deep integration of Jenkins and Maven: Automatic triggers between projects depending on SNAPSHOTs, automated configuration of various Jenkins publishers (Junit, …).</p>
+</li>
+<li><p>SSH plugin<br>This plugin executes shell commands remotely using SSH protocol.</p>
+</li>
+</ul>
+<h4 id="3-2-2-项目配置"><a href="#3-2-2-项目配置" class="headerlink" title="3.2.2 项目配置"></a>3.2.2 项目配置</h4><img src="/2018/05/15/jenkins-gitLib-maven-SSh-war/projectSetting.png"> 
+<ul>
+<li><p>General  </p>
+<img src="/2018/05/15/jenkins-gitLib-maven-SSh-war/projectGeneral.png">  
+</li>
+<li><p>源码管理  </p>
+<img src="/2018/05/15/jenkins-gitLib-maven-SSh-war/codeManager.png">  
+</li>
+<li><p>构建触发器  </p>
+<img src="/2018/05/15/jenkins-gitLib-maven-SSh-war/buildTiggerSetting.png"> 
+</li>
+<li><p>构建环境  </p>
+<img src="/2018/05/15/jenkins-gitLib-maven-SSh-war/buildEvmSetting.png">
+</li>
+<li><p>Pre Steps  </p>
+<img src="/2018/05/15/jenkins-gitLib-maven-SSh-war/preStepsAndBuild.png">  
+</li>
+<li><p>Build  </p>
+<img src="/2018/05/15/jenkins-gitLib-maven-SSh-war/buildSetting.png">  
+</li>
+<li><p>Post Steps  </p>
+<img src="/2018/05/15/jenkins-gitLib-maven-SSh-war/PostStepsSetting.png">   
+</li>
+</ul>
+<p>注意事项：<br><img src="/2018/05/15/jenkins-gitLib-maven-SSh-war/PostStepsSetting1.png">    </p>
+<ul>
+<li>构建设置<br>保持默认即可  </li>
+</ul>
+<h3 id="3-3-shell脚本"><a href="#3-3-shell脚本" class="headerlink" title="3.3 shell脚本"></a>3.3 shell脚本</h3><p>shell脚本步骤：</p>
+<ol>
+<li>备份原来war包解压的folder。</li>
+<li>关闭运行中的tomcat。</li>
+<li>复制上传后的war到webapps目录。</li>
+<li>启动tomcat。</li>
+<li>删除上传到临时文件夹中的war包。  </li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line">#defined</div><div class="line"></div><div class="line">#TOMCAT_INFO</div><div class="line">TOMCAT_HOME=&quot;/u03/samp/soft/apache/tomcats/tomcat-flow-19008&quot; </div><div class="line">TOMCAT_PORT=&quot;19008&quot;</div><div class="line">TOMCAT_NAME=&quot;tomcat-flow-19008&quot;</div><div class="line">TOMCAT_WEBAPPS_NAME=&quot;webapps&quot;</div><div class="line">TOMCAT_SHUTDOWN=$TOMCAT_HOME/bin/shutdown.sh  </div><div class="line">TOMCA_START=$TOMCAT_HOME/bin/startup.sh</div><div class="line"></div><div class="line">PROJECT_NAME=&quot;fzsFlow&quot;</div><div class="line"></div><div class="line">##临时上传的war包名称</div><div class="line">TEMP_UPLOAD_WAR_NAME=&quot;tempUploadWar&quot;</div><div class="line"></div><div class="line">## 时间戳 eg：20180510142558</div><div class="line">DATE_TIME=$(date +%Y%m%d%H%M%S)</div><div class="line"></div><div class="line">## 备份文件夹名称，备份服务器中正在运行的folder</div><div class="line">BACKUP_RUNNING_WAR_FOLDER_NAME=&quot;backupRunningWar&quot;</div><div class="line"></div><div class="line"></div><div class="line">#创建备份文件夹</div><div class="line">function createBackFolder()&#123;</div><div class="line">	## 创建备份文件夹（若没有则创建） begin</div><div class="line">	echo ---------------------------备份文件夹$TEMP_UPLOAD_WAR_NAME，备份临时上传的war（若没有则创建） beginning</div><div class="line">	if [ -d &quot;$TOMCAT_HOME/$TEMP_UPLOAD_WAR_NAME&quot; ] ; then  </div><div class="line">	echo &quot;文件夹存在！&quot;  </div><div class="line">	else  </div><div class="line">	echo &quot;文件夹不存在,创建文件夹：$TEMP_UPLOAD_WAR_NAME&quot;  </div><div class="line">	cd $TOMCAT_HOME</div><div class="line">	mkdir $TEMP_UPLOAD_WAR_NAME</div><div class="line">	fi  </div><div class="line">	echo ---------------------------备份文件夹$TEMP_UPLOAD_WAR_NAME，备份临时上传的war（若没有则创建） end</div><div class="line"></div><div class="line">	echo ---------------------------备份文件夹$BACKUP_RUNNING_WAR_FOLDER_NAME，备份服务器中正在运行的folder（若没有则创建） beginning</div><div class="line">	if [ -d &quot;$TOMCAT_HOME/$BACKUP_RUNNING_WAR_FOLDER_NAME&quot; ] ; then  </div><div class="line">	echo &quot;文件夹存在！&quot;  </div><div class="line">	else  </div><div class="line">	echo &quot;文件夹不存在,创建文件夹：$BACKUP_RUNNING_WAR_FOLDER_NAME&quot;  </div><div class="line">	cd $TOMCAT_HOME</div><div class="line">	mkdir $BACKUP_RUNNING_WAR_FOLDER_NAME</div><div class="line">	fi  </div><div class="line">	echo ---------------------------备份文件夹$BACKUP_RUNNING_WAR_FOLDER_NAME，备份服务器中正在运行的folder（若没有则创建） end</div><div class="line">	# 创建备份文件夹 end</div><div class="line">&#125;</div><div class="line"></div><div class="line">#备份运行中的代码</div><div class="line">function backUpRunningCode()&#123;</div><div class="line">	echo ---------------------------备份服务器原来文件夹 beginning</div><div class="line">	## 先备份原war解压后的folder</div><div class="line">	cd $TOMCAT_HOME/$TOMCAT_WEBAPPS_NAME</div><div class="line">	zip -r $TOMCAT_HOME/$BACKUP_RUNNING_WAR_FOLDER_NAME/&quot;$PROJECT_NAME$DATE_TIME.zip&quot; $PROJECT_NAME</div><div class="line">	echo 查看备份目录下的zip文件：</div><div class="line">	ls -lt $TOMCAT_HOME/$BACKUP_RUNNING_WAR_FOLDER_NAME </div><div class="line">	echo ---------------------------备份服务器原来文件夹 end</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">#删除运行中的Tomcat</div><div class="line">function killRunningTomcat()&#123;</div><div class="line">	## Kill 所有运行中的Tomcat begin</div><div class="line">	echo ---------------------------找出所有的Tomcat pid 并kill掉  beginning</div><div class="line">	TOMCAT_PID=$(ps -ef|grep $TOMCAT_NAME|grep start|grep -v &apos;grep&apos;|grep -v &apos;jenkins_restart.sh&apos;|grep -v &apos;zip -r&apos;|awk &apos;&#123;print $2&#125;&apos;)</div><div class="line">	#遍历是否存在其他tomcat，如果有的话，kill掉</div><div class="line">	while [ -n &quot;$TOMCAT_PID&quot; ]    </div><div class="line">		do </div><div class="line">			echo &quot;scan tomcat pid :&quot; $TOMCAT_PID</div><div class="line">		    $TOMCAT_SHUTDOWN</div><div class="line">		    sleep 3s</div><div class="line">		    kill -9 $TOMCAT_PID</div><div class="line">			sleep 3s</div><div class="line">			TOMCAT_PID=$(ps -ef|grep $TOMCAT_NAME|grep start|grep -v &apos;grep&apos;|grep -v &apos;jenkins_restart.sh&apos;|grep -v &apos;zip -r&apos;|awk &apos;&#123;print $2&#125;&apos;)  ##再查找一次tomcat的pid</div><div class="line">	done</div><div class="line">	echo ---------------------------找出所有的Tomcat pid 并kill掉  end</div><div class="line">	## Kill 所有运行中的Tomcat end</div><div class="line">&#125;</div><div class="line"></div><div class="line">## 删除webapps下的war包和war包解压后的文件夹</div><div class="line">function removeOldWarFolder()&#123;</div><div class="line">	echo ---------------------------删除webapps下的war包和war包解压后的文件夹  beginning</div><div class="line">	rm -rf $TOMCAT_HOME/$TOMCAT_WEBAPPS_NAME/$PROJECT_NAME.war</div><div class="line">	rm -rf $TOMCAT_HOME/$TOMCAT_WEBAPPS_NAME/$PROJECT_NAME</div><div class="line">	echo ---------------------------删除webapps下的war包和war包解压后的文件夹  end</div><div class="line">&#125;</div><div class="line"></div><div class="line">## 复制war包到webapps目录</div><div class="line">function copyUploadWar2Webapps()&#123;</div><div class="line">	echo ---------------------------复制war包到webapps目录 beginning</div><div class="line">	cp $TOMCAT_HOME/$TEMP_UPLOAD_WAR_NAME/$PROJECT_NAME.war $TOMCAT_HOME/$TOMCAT_WEBAPPS_NAME</div><div class="line">	echo ---------------------------复制war包到webapps目录 end</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">## 启动tomcat</div><div class="line">function startTomcat()&#123;</div><div class="line">	echo ---------------------------启动Tomcat beginning</div><div class="line">	$TOMCA_START</div><div class="line">	echo ---------------------------启动Tomcat end</div><div class="line">&#125; </div><div class="line"></div><div class="line"></div><div class="line">## 删除之前上传的临时war包</div><div class="line">function removeTempUploadWarPkg()&#123;</div><div class="line">	echo ---------------------------删除之前上传的临时war包 beginning</div><div class="line">	rm -rf $TOMCAT_HOME/$TEMP_UPLOAD_WAR_NAME/$PROJECT_NAME.war</div><div class="line">	echo ---------------------------删除之前上传的临时war包 end</div><div class="line">&#125;</div><div class="line"></div><div class="line">## 删除1天前上传的备份的war包</div><div class="line">function removeBackUpFiles()&#123;		</div><div class="line">	echo ---------------------------删除1天前上传的备份的war包 beginning</div><div class="line">	find $TOMCAT_HOME/$BACKUP_RUNNING_WAR_FOLDER_NAME -mtime +0 -name &quot;$PROJECT_NAME*.zip&quot; -exec rm -rf &#123;&#125; \;</div><div class="line">	echo ---------------------------删除1天前上传的备份的war包 end	</div><div class="line">&#125;</div><div class="line"></div><div class="line">#创建备份文件夹（若没有则创建）</div><div class="line">createBackFolder</div><div class="line">#备份运行中的代码</div><div class="line">backUpRunningCode</div><div class="line">#关闭所有运行的Tomcat</div><div class="line">killRunningTomcat</div><div class="line">#删除服务器中的war+folder</div><div class="line">removeOldWarFolder</div><div class="line">#拷贝上传后的war到webapps</div><div class="line">copyUploadWar2Webapps</div><div class="line">#启动Tomcat</div><div class="line">startTomcat</div><div class="line">#删除上传的临时war包</div><div class="line">removeTempUploadWarPkg</div><div class="line">#删除1天前上传的备份的war包</div><div class="line">removeBackUpFiles</div></pre></td></tr></table></figure>
+
+    </article>
+    <!-- license  -->
+    
+        <div class="license-wrapper">
+            <p>原文作者: <a href="http://www.17be.top">MR Lee</a>
+            <p>原文链接: <a href="http://www.17be.top/2018/05/15/jenkins-gitLib-maven-SSh-war/">http://www.17be.top/2018/05/15/jenkins-gitLib-maven-SSh-war/</a>
+            <p>发表日期: <a href="http://www.17be.top/2018/05/15/jenkins-gitLib-maven-SSh-war/">May 15th 2018, 10:40:09</a>
+            <p>版权声明: 本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+        </div>
+    
+    <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2018/06/01/购买搬瓦工vps/" title= 购买搬瓦工vps >
+                    <div class="nextTitle">购买搬瓦工vps</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/05/03/域名/" title= 域名 >
+                    <div class="prevTitle">域名</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
+    
+    
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: "Tue May 15 2018 10:40:09 GMT+0800", // 可选。默认为 location.href
+        owner: 'freshstudent',
+        repo: 'freshstudent.github.io',
+        oauth: {
+            client_id: 'bbbc3c85aed0f82656a4',
+            client_secret: '68daaf1e207b772ba6ec89877e2faae0be656433',
+        },
+    })
+    gitment.render('container')
+
+</script>
+
+    <!--PC版-->
+
+    <!--PC版-->
+
+
+    
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
+            
+        </div>
+        <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+    <div class="social">
+        
+    
+        
+    
+        
+    
+        
+            
+                <span class="iconfont-archer wechat" title=wechat>
+                  
+                  <img class="profile-qr" src="/assets/example_qr.png" />
+                </span>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
+    </div>
+    <!-- 不蒜子  -->
+    
+    <div class="busuanzi-container">
+        <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span>
+        </span>
+    </div>
+    
+</footer>
+    </div>
+    <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#jenkins-gitLib-maven-SSh-war-自动化远程构建war包"><span class="toc-number">1.</span> <span class="toc-text">jenkins+gitLib+maven+SSh+war 自动化远程构建war包</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、安装jenkins（常规操作过程不表）"><span class="toc-number">1.1.</span> <span class="toc-text">一、安装jenkins（常规操作过程不表）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、需要安装jenkins插件："><span class="toc-number">1.2.</span> <span class="toc-text">二、需要安装jenkins插件：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、集成GitLab插件"><span class="toc-number">1.2.1.</span> <span class="toc-text">1、集成GitLab插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、构建Maven项目需要用到的插件"><span class="toc-number">1.2.2.</span> <span class="toc-text">2、构建Maven项目需要用到的插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、发布远程war包的，将war包发送到远程Tomcat中"><span class="toc-number">1.2.3.</span> <span class="toc-text">3、发布远程war包的，将war包发送到远程Tomcat中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、将本地war包上传到远端服务器，然后执行shell脚本"><span class="toc-number">1.2.4.</span> <span class="toc-text">4、将本地war包上传到远端服务器，然后执行shell脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、远程运行shell脚本"><span class="toc-number">1.2.5.</span> <span class="toc-text">5、远程运行shell脚本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、相关步骤"><span class="toc-number">1.3.</span> <span class="toc-text">三、相关步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-jenkins启动"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.1 jenkins启动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-jenkins-配置"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.2 jenkins 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-1-系统管理"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">3.2.1 系统管理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-2-项目配置"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">3.2.2 项目配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-shell脚本"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.3 shell脚本</span></a></li></ol></li></ol></li></ol>
+    </div>
+    
+    <div class="back-top iconfont-archer">&#xe639;</div>
+    <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-panel-archives">
+    <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 6 </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/23</span><a class="archive-post-title" href= "/2018/08/23/BulletsNote/" >BulletsNote</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/21</span><a class="archive-post-title" href= "/2018/08/21/JenkinsAndSSHStartTomcat/" >Jenkins启动tomcat与SSH启动区别</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/01</span><a class="archive-post-title" href= "/2018/06/01/购买搬瓦工vps/" >购买搬瓦工vps</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/jenkins-gitLib-maven-SSh-war/" >jenkins+gitLib+maven+SSh+war</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/03</span><a class="archive-post-title" href= "/2018/05/03/域名/" >域名</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2017 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/01</span><a class="archive-post-title" href= "/2017/11/01/hello-world/" >Hello World</a>
+        </li>
+    
+    </div>
+  </div>
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name" data-tags="Jenkins"><span class="iconfont-archer">&#xe606;</span>Jenkins</span>
+    
+        <span class="sidebar-tag-name" data-tags="域名"><span class="iconfont-archer">&#xe606;</span>域名</span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #787878; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: true
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+        <span class="sidebar-category-name" data-categories="程序员那些事"><span class="iconfont-archer">&#xe60a;</span>程序员那些事</span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var siteMeta = {
+        root: '/',
+        author: 'MR Lee'
+    }
+</script>
+    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/scripts/main.js"></script>
+    <!-- busuanzi  -->
+    
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    <!-- CNZZ  -->
+    
+    </div>
+    <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
+    
+    </body>
+</html>
+
+
