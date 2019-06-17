@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://FreshStudent.github.io</id>
     <title>Gridea</title>
-    <updated>2019-06-17T03:33:53.924Z</updated>
+    <updated>2019-06-17T03:42:59.928Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://FreshStudent.github.io"/>
     <link rel="self" href="http://FreshStudent.github.io/atom.xml"/>
@@ -248,8 +248,8 @@ samp     23041 16786  0 09:56 pts/0    00:00:00 grep 19011
 <p>做了以下验证步骤：</p>
 </blockquote>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6532972"> ssh进入tomcat的bin目录下手动重启Tomcat --&gt; 原来项目A（jdk1.8）可以正常启动。  【<strong>排除shell脚本问题</strong><label class="task-list-item-label" for="task-item-6532972"> ssh进入tomcat的bin目录下手动重启Tomcat --> 原来项目A（jdk1.8）可以正常启动。  【**排除shell脚本问题**】</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-100829"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --&gt; 项目可以正常启动。   【<strong>排除tomcat配置问题</strong><label class="task-list-item-label" for="task-item-100829"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --> 项目可以正常启动。   【**排除tomcat配置问题**】</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8699548"> ssh进入tomcat的bin目录下手动重启Tomcat --&gt; 原来项目A（jdk1.8）可以正常启动。  【<strong>排除shell脚本问题</strong><label class="task-list-item-label" for="task-item-8699548"> ssh进入tomcat的bin目录下手动重启Tomcat --> 原来项目A（jdk1.8）可以正常启动。  【**排除shell脚本问题**】</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6945730"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --&gt; 项目可以正常启动。   【<strong>排除tomcat配置问题</strong><label class="task-list-item-label" for="task-item-6945730"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --> 项目可以正常启动。   【**排除tomcat配置问题**】</label></li>
 </ul>
 <h4 id="排除了shell脚本-tomcat配置问题那估计就是环境问题了">排除了shell脚本、tomcat配置问题，那估计就是环境问题了？</h4>
 <blockquote>
@@ -462,13 +462,13 @@ Glassfish 3.x remote deployment</s></p>
 <p>SSH remote hosts<br>
 配置远端SSH连接相关参数
 填写相关参数后，需要点击“check connection”按钮检查是否能成功连通。
-{% asset_img SSHremotehostsSetting.png 配置远端SSH连接相关参数 %}</p>
+<img src="http://FreshStudent.github.io/post-images/SSHremotehostsSetting.png" alt="配置远端SSH连接相关参数"></p>
 </li>
 <li>
 <p>Gitlab<br>
 Gitlib相关参数配置
 这一步需要填写gitLib中的相关参数，复制过来。
-{% asset_img GitlabSetting.png 配置gitLib中的相关参数 %}</p>
+<img src="http://FreshStudent.github.io/post-images/GitlabSetting.png" alt="配置gitLib中的相关参数"></p>
 </li>
 <li>
 <p>Publish over SSH<br>
@@ -482,7 +482,8 @@ Gitlib相关参数配置
 <ul>
 <li>Maven<br>
 配置打包gitlib代码的相关命令。<br>
-{% asset_img MavenSetting.png 配置打包gitlib代码的相关命令。 %}</li>
+{% asset_img MavenSetting.png 配置打包gitlib代码的相关命令。 %}
+<img src="http://FreshStudent.github.io/post-images/MavenSetting.png" alt="配置打包gitlib代码的相关命令"></li>
 </ul>
 <ol start="3">
 <li>管理插件：添加、删除、禁用或启用Jenkins功能扩展插件。
@@ -511,39 +512,39 @@ This plugin executes shell commands remotely using SSH protocol.</p>
 </li>
 </ul>
 <h4 id="322-项目配置">3.2.2 项目配置</h4>
-<p>{% asset_img projectSetting.png %}</p>
+<p><img src="http://FreshStudent.github.io/post-images/projectSetting.png" alt=""></p>
 <ul>
 <li>
 <p>General<br>
-{% asset_img projectGeneral.png %}</p>
+<img src="http://FreshStudent.github.io/post-images/projectGeneral.png" alt=""></p>
 </li>
 <li>
 <p>源码管理<br>
-{% asset_img codeManager.png %}</p>
+<img src="http://FreshStudent.github.io/post-images/codeManager.png" alt=""></p>
 </li>
 <li>
 <p>构建触发器<br>
-{% asset_img buildTiggerSetting.png %}</p>
+<img src="http://FreshStudent.github.io/post-images/buildTiggerSetting.png" alt=""></p>
 </li>
 <li>
 <p>构建环境<br>
-{% asset_img buildEvmSetting.png %}</p>
+<img src="http://FreshStudent.github.io/post-images/buildEvmSetting.png" alt=""></p>
 </li>
 <li>
 <p>Pre Steps<br>
-{% asset_img preStepsAndBuild.png %}</p>
+<img src="http://FreshStudent.github.io/post-images/preStepsAndBuild.png" alt=""></p>
 </li>
 <li>
 <p>Build<br>
-{% asset_img buildSetting.png %}</p>
+<img src="http://FreshStudent.github.io/post-images/buildSetting.png" alt=""></p>
 </li>
 <li>
 <p>Post Steps<br>
-{% asset_img PostStepsSetting.png %}</p>
+<img src="http://FreshStudent.github.io/post-images/PostStepsSetting.png" alt=""></p>
 </li>
 </ul>
 <p>注意事项：<br>
-{% asset_img PostStepsSetting1.png %}</p>
+<img src="http://FreshStudent.github.io/post-images/PostStepsSetting1.png" alt=""></p>
 <ul>
 <li>构建设置<br>
 保持默认即可</li>
@@ -705,17 +706,18 @@ removeBackUpFiles
 <p><a href="https://wanwang.aliyun.com/?spm=5176.8142029.388261.277.a7236d3eP22Jis">相关Url:</a><br>
 <img src="http://FreshStudent.github.io/post-images/aliyunSearch.png" alt="打开阿里云域名"></p>
 <h3 id="搜索域名">搜索域名</h3>
-<p>{% asset_img aliyunSearchYouWant.png 搜索你想要的域名%}</p>
+<p><img src="http://FreshStudent.github.io/post-images/aliyunSearchYouWant.png" alt="搜索你想要的域名"></p>
 <h3 id="购买域名">购买域名</h3>
-<p>{% asset_img aliyunBuy.png 购买选中的域名 %}</p>
+<p><img src="http://FreshStudent.github.io/post-images/aliyunBuy.png" alt="购买选中的域名"></p>
 <h3 id="查找博客对应的ip用于映射">查找博客对应的IP，用于映射</h3>
-<p>{% asset_img findGitHubIOIpAddress.png 查找gitHubIO中对应的IP地址 %}</p>
+<p>{% asset_img findGitHubIOIpAddress.png 查找gitHubIO中对应的IP地址 %}
+<img src="http://FreshStudent.github.io/post-images/findGitHubIOIpAddress.png" alt="查找gitHubIO中对应的IP地址"></p>
 <h3 id="域名解析">域名解析</h3>
-<p>{% asset_img aliyunSiteToYourWebStep1.png 将域名与GitHub捆绑起来 %}
-{% asset_img aliyunSiteToYourWebStep2.png 将域名与GitHub捆绑起来 %}</p>
+<p><img src="http://FreshStudent.github.io/post-images/aliyunSiteToYourWebStep1.png" alt="将域名与GitHub捆绑起来">
+<img src="http://FreshStudent.github.io/post-images/aliyunSiteToYourWebStep2.png" alt="将域名与GitHub捆绑起来"></p>
 <h3 id="github的io项目中捆绑域名">gitHub的IO项目中捆绑域名</h3>
-<p>{% asset_img aliyunGitHubSetSiteStep1.png 将域名与GitHub捆绑起来 %}
-{% asset_img aliyunGitHubSetSiteStep2.png 将域名与GitHub捆绑起来 %}<br>
+<p><img src="http://FreshStudent.github.io/post-images/aliyunGitHubSetSiteStep1.png" alt="将域名与GitHub捆绑起来">
+<img src="http://FreshStudent.github.io/post-images/aliyunGitHubSetSiteStep2.png" alt="将域名与GitHub捆绑起来">
 在本地Hexo文件夹source中创建CNAME（Linux 命令： touch CNAME）文件，注意该文件名没有后缀，内容是刚申请的域名。</p>
 <pre><code>Linux code ：touch CNAME
 </code></pre>
