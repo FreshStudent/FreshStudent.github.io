@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>jenkins+gitLib+maven+SSh+war | Gridea</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://FreshStudent.github.io/favicon.ico?v=1560740807263">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="http://FreshStudent.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://FreshStudent.github.io">
+        <img src="http://FreshStudent.github.io/images/avatar.png?v=1560740807263" class="site-logo">
+        <h1 class="site-title">Gridea</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="http://FreshStudent.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">jenkins+gitLib+maven+SSh+war</h2>
+            <div class="post-date">2018-05-15</div>
+            
+            <div class="post-content">
+              <h1 id="jenkinsgitlibmavensshwar-自动化远程构建war包">jenkins+gitLib+maven+SSh+war 自动化远程构建war包</h1>
+<hr>
+<p>公司一直都是手动发布war包的，这里有一个问题，人为的操作是很容易出现问题的，于是想到用jenkins来进行发布war包，减少人工参与</p>
+<hr>
+<!--more-->
+<h2 id="一-安装jenkins常规操作过程不表">一、安装jenkins（常规操作过程不表）</h2>
+<p>启动jenkins，修改默认端口号（8080）启动</p>
+<ol>
+<li>
+<p>打开终端，cd 到Jenkins的安装目录（即jenkins.war所在目录），如：D:\Program Files (x86)\Jenkins</p>
+</li>
+<li>
+<p>执行命令：
+<code>java -jar jenkins.war --ajp13Port=-1 --httpPort=9999</code></p>
+</li>
+</ol>
+<h2 id="二-需要安装jenkins插件">二、需要安装jenkins插件：</h2>
+<h3 id="1-集成gitlab插件">1、集成GitLab插件</h3>
+<p><strong>GitLab Plugin</strong><br>
+This plugin integrates GitLab to Jenkins by faking a GitLab CI Server.</p>
+<p>用于：
+需要配置gitlib中的private Key等相关配置。</p>
+<h3 id="2-构建maven项目需要用到的插件">2、构建Maven项目需要用到的插件</h3>
+<p><strong>Maven Integration plugin</strong><br>
+This plug-in provides, for better and for worse, a deep integration of Jenkins and Maven: Automatic triggers between projects depending on SNAPSHOTs, automated configuration of various Jenkins publishers (Junit, ...).</p>
+<p>用于：
+指向本地的相关maven所在，用于打包命令。</p>
+<h3 id="3-发布远程war包的将war包发送到远程tomcat中">3、发布远程war包的，将war包发送到远程Tomcat中</h3>
+<blockquote>
+<p>【注意！！！！！！！！】这种方法已经弃用，因为tomcat的自动发布功能经常出现故障，导致发布失败。</p>
+</blockquote>
+<p><s><strong>Deploy to container Plugin</strong></s>
+<s>This plugin allows you to deploy a war to a container after a successful build.
+Glassfish 3.x remote deployment</s></p>
+<p><s>目的：</s>
+<s>指定jenkins服务器中的war包路径，通过配置tomcat目录下的tomcat-users.xml文件可以实现远程发布war包到指定路径。但是这里有一个问题，需要启动远程tomcat才可以成功提交，觉得这种方式不是很靠谱，想换一种基于shell命令的方式进行的项目部署。</s></p>
+<h3 id="4-将本地war包上传到远端服务器然后执行shell脚本">4、将本地war包上传到远端服务器，然后执行shell脚本</h3>
+<p><strong>Publish over SSH</strong></p>
+<h3 id="5-远程运行shell脚本">5、远程运行shell脚本</h3>
+<p>SSH
+配置在远程tomcat中可以执行的shell脚本命令</p>
+<h2 id="三-相关步骤">三、相关步骤</h2>
+<h3 id="31-jenkins启动">3.1 jenkins启动</h3>
+<ol>
+<li>
+<p>启动jenkins
+由于我是使用homebrew来安装jenkins的，需要在终端中输入代码：</p>
+<p><code>shell brew info jenkins</code></p>
+</li>
+<li>
+<p>打开终端，cd 到Jenkins的安装目录（即jenkins.war所在目录）</p>
+<p><code>cd /usr/local/Cellar/jenkins/2.102/libexec</code></p>
+</li>
+<li>
+<p>启动jenkins，修改默认端口号（8080）启动，执行命令：</p>
+<p><code>java -jar jenkins.war --ajp13Port=-1 --httpPort=9999</code></p>
+</li>
+<li>
+<p>输入url，访问jenkins：</p>
+<p><code>http://localhost:9999</code></p>
+</li>
+</ol>
+<h3 id="32-jenkins-配置">3.2 jenkins 配置</h3>
+<h4 id="321-系统管理">3.2.1 系统管理</h4>
+<ol>
+<li>系统设置：全局设置&amp;路径。</li>
+</ol>
+<ul>
+<li>
+<p>SSH remote hosts<br>
+配置远端SSH连接相关参数
+填写相关参数后，需要点击“check connection”按钮检查是否能成功连通。
+{% asset_img SSHremotehostsSetting.png 配置远端SSH连接相关参数 %}</p>
+</li>
+<li>
+<p>Gitlab<br>
+Gitlib相关参数配置
+这一步需要填写gitLib中的相关参数，复制过来。
+{% asset_img GitlabSetting.png 配置gitLib中的相关参数 %}</p>
+</li>
+<li>
+<p>Publish over SSH<br>
+利用SSH，将文件复制到远程服务器特定文件夹中，并且可以执行自定义shell脚本。
+{% asset_img publishOverSSHSetting.png 利用SSH，将文件复制到远程服务器特定文件夹中，并且可以执行自定义shell脚本 %}</p>
+</li>
+</ul>
+<ol start="2">
+<li>全局工具配置： 工具配置，包括他们的位置和自动安装器。</li>
+</ol>
+<ul>
+<li>Maven<br>
+配置打包gitlib代码的相关命令。<br>
+{% asset_img MavenSetting.png 配置打包gitlib代码的相关命令。 %}</li>
+</ul>
+<ol start="3">
+<li>管理插件：添加、删除、禁用或启用Jenkins功能扩展插件。
+使用的插件：</li>
+</ol>
+<ul>
+<li>
+<p>Git Parameter Plug-In<br>
+Adds ability to choose from git repository revisions or tags。</p>
+</li>
+<li>
+<p>GitLab Plugin<br>
+This plugin integrates GitLab to Jenkins by faking a GitLab CI Server.</p>
+</li>
+<li>
+<p>Publish Over SSH<br>
+Send build artifacts over SSH</p>
+</li>
+<li>
+<p>Maven Integration plugin<br>
+This plug-in provides, for better and for worse, a deep integration of Jenkins and Maven: Automatic triggers between projects depending on SNAPSHOTs, automated configuration of various Jenkins publishers (Junit, ...).</p>
+</li>
+<li>
+<p>SSH plugin<br>
+This plugin executes shell commands remotely using SSH protocol.</p>
+</li>
+</ul>
+<h4 id="322-项目配置">3.2.2 项目配置</h4>
+<p>{% asset_img projectSetting.png %}</p>
+<ul>
+<li>
+<p>General<br>
+{% asset_img projectGeneral.png %}</p>
+</li>
+<li>
+<p>源码管理<br>
+{% asset_img codeManager.png %}</p>
+</li>
+<li>
+<p>构建触发器<br>
+{% asset_img buildTiggerSetting.png %}</p>
+</li>
+<li>
+<p>构建环境<br>
+{% asset_img buildEvmSetting.png %}</p>
+</li>
+<li>
+<p>Pre Steps<br>
+{% asset_img preStepsAndBuild.png %}</p>
+</li>
+<li>
+<p>Build<br>
+{% asset_img buildSetting.png %}</p>
+</li>
+<li>
+<p>Post Steps<br>
+{% asset_img PostStepsSetting.png %}</p>
+</li>
+</ul>
+<p>注意事项：<br>
+{% asset_img PostStepsSetting1.png %}</p>
+<ul>
+<li>构建设置<br>
+保持默认即可</li>
+</ul>
+<h3 id="33-shell脚本">3.3 shell脚本</h3>
+<p>shell脚本步骤：</p>
+<ol>
+<li>备份原来war包解压的folder。</li>
+<li>关闭运行中的tomcat。</li>
+<li>复制上传后的war到webapps目录。</li>
+<li>启动tomcat。</li>
+<li>删除上传到临时文件夹中的war包。</li>
+</ol>
+<pre><code>#!/bin/bash
+#defined
+
+#TOMCAT_INFO
+TOMCAT_HOME=&quot;/u03/samp/soft/apache/tomcats/tomcat-flow-19008&quot; 
+TOMCAT_PORT=&quot;19008&quot;
+TOMCAT_NAME=&quot;tomcat-flow-19008&quot;
+TOMCAT_WEBAPPS_NAME=&quot;webapps&quot;
+TOMCAT_SHUTDOWN=$TOMCAT_HOME/bin/shutdown.sh  
+TOMCA_START=$TOMCAT_HOME/bin/startup.sh
+
+PROJECT_NAME=&quot;fzsFlow&quot;
+
+##临时上传的war包名称
+TEMP_UPLOAD_WAR_NAME=&quot;tempUploadWar&quot;
+
+## 时间戳 eg：20180510142558
+DATE_TIME=$(date +%Y%m%d%H%M%S)
+
+## 备份文件夹名称，备份服务器中正在运行的folder
+BACKUP_RUNNING_WAR_FOLDER_NAME=&quot;backupRunningWar&quot;
+
+
+#创建备份文件夹
+function createBackFolder(){
+	## 创建备份文件夹（若没有则创建） begin
+	echo ---------------------------备份文件夹$TEMP_UPLOAD_WAR_NAME，备份临时上传的war（若没有则创建） beginning
+	if [ -d &quot;$TOMCAT_HOME/$TEMP_UPLOAD_WAR_NAME&quot; ] ; then  
+	echo &quot;文件夹存在！&quot;  
+	else  
+	echo &quot;文件夹不存在,创建文件夹：$TEMP_UPLOAD_WAR_NAME&quot;  
+	cd $TOMCAT_HOME
+	mkdir $TEMP_UPLOAD_WAR_NAME
+	fi  
+	echo ---------------------------备份文件夹$TEMP_UPLOAD_WAR_NAME，备份临时上传的war（若没有则创建） end
+
+	echo ---------------------------备份文件夹$BACKUP_RUNNING_WAR_FOLDER_NAME，备份服务器中正在运行的folder（若没有则创建） beginning
+	if [ -d &quot;$TOMCAT_HOME/$BACKUP_RUNNING_WAR_FOLDER_NAME&quot; ] ; then  
+	echo &quot;文件夹存在！&quot;  
+	else  
+	echo &quot;文件夹不存在,创建文件夹：$BACKUP_RUNNING_WAR_FOLDER_NAME&quot;  
+	cd $TOMCAT_HOME
+	mkdir $BACKUP_RUNNING_WAR_FOLDER_NAME
+	fi  
+	echo ---------------------------备份文件夹$BACKUP_RUNNING_WAR_FOLDER_NAME，备份服务器中正在运行的folder（若没有则创建） end
+	# 创建备份文件夹 end
+}
+
+#备份运行中的代码
+function backUpRunningCode(){
+	echo ---------------------------备份服务器原来文件夹 beginning
+	## 先备份原war解压后的folder
+	cd $TOMCAT_HOME/$TOMCAT_WEBAPPS_NAME
+	zip -r $TOMCAT_HOME/$BACKUP_RUNNING_WAR_FOLDER_NAME/&quot;$PROJECT_NAME$DATE_TIME.zip&quot; $PROJECT_NAME
+	echo 查看备份目录下的zip文件：
+	ls -lt $TOMCAT_HOME/$BACKUP_RUNNING_WAR_FOLDER_NAME 
+	echo ---------------------------备份服务器原来文件夹 end
+}
+
+
+#删除运行中的Tomcat
+function killRunningTomcat(){
+	## Kill 所有运行中的Tomcat begin
+	echo ---------------------------找出所有的Tomcat pid 并kill掉  beginning
+	TOMCAT_PID=$(ps -ef|grep $TOMCAT_NAME|grep start|grep -v 'grep'|grep -v 'jenkins_restart.sh'|grep -v 'zip -r'|awk '{print $2}')
+	#遍历是否存在其他tomcat，如果有的话，kill掉
+	while [ -n &quot;$TOMCAT_PID&quot; ]    
+		do 
+			echo &quot;scan tomcat pid :&quot; $TOMCAT_PID
+		    $TOMCAT_SHUTDOWN
+		    sleep 3s
+		    kill -9 $TOMCAT_PID
+			sleep 3s
+			TOMCAT_PID=$(ps -ef|grep $TOMCAT_NAME|grep start|grep -v 'grep'|grep -v 'jenkins_restart.sh'|grep -v 'zip -r'|awk '{print $2}')  ##再查找一次tomcat的pid
+	done
+	echo ---------------------------找出所有的Tomcat pid 并kill掉  end
+	## Kill 所有运行中的Tomcat end
+}
+
+## 删除webapps下的war包和war包解压后的文件夹
+function removeOldWarFolder(){
+	echo ---------------------------删除webapps下的war包和war包解压后的文件夹  beginning
+	rm -rf $TOMCAT_HOME/$TOMCAT_WEBAPPS_NAME/$PROJECT_NAME.war
+	rm -rf $TOMCAT_HOME/$TOMCAT_WEBAPPS_NAME/$PROJECT_NAME
+	echo ---------------------------删除webapps下的war包和war包解压后的文件夹  end
+}
+
+## 复制war包到webapps目录
+function copyUploadWar2Webapps(){
+	echo ---------------------------复制war包到webapps目录 beginning
+	cp $TOMCAT_HOME/$TEMP_UPLOAD_WAR_NAME/$PROJECT_NAME.war $TOMCAT_HOME/$TOMCAT_WEBAPPS_NAME
+	echo ---------------------------复制war包到webapps目录 end
+}
+
+
+## 启动tomcat
+function startTomcat(){
+	echo ---------------------------启动Tomcat beginning
+	$TOMCA_START
+	echo ---------------------------启动Tomcat end
+} 
+
+
+## 删除之前上传的临时war包
+function removeTempUploadWarPkg(){
+	echo ---------------------------删除之前上传的临时war包 beginning
+	rm -rf $TOMCAT_HOME/$TEMP_UPLOAD_WAR_NAME/$PROJECT_NAME.war
+	echo ---------------------------删除之前上传的临时war包 end
+}
+
+## 删除1天前上传的备份的war包
+function removeBackUpFiles(){		
+	echo ---------------------------删除1天前上传的备份的war包 beginning
+	find $TOMCAT_HOME/$BACKUP_RUNNING_WAR_FOLDER_NAME -mtime +0 -name &quot;$PROJECT_NAME*.zip&quot; -exec rm -rf {} \;
+	echo ---------------------------删除1天前上传的备份的war包 end	
+}
+
+#创建备份文件夹（若没有则创建）
+createBackFolder
+#备份运行中的代码
+backUpRunningCode
+#关闭所有运行的Tomcat
+killRunningTomcat
+#删除服务器中的war+folder
+removeOldWarFolder
+#拷贝上传后的war到webapps
+copyUploadWar2Webapps
+#启动Tomcat
+startTomcat
+#删除上传的临时war包
+removeTempUploadWarPkg
+#删除1天前上传的备份的war包
+removeBackUpFiles
+</code></pre>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="http://FreshStudent.github.io/post/域名">
+                  <h3 class="post-title">
+                    域名
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Jenkins启动tomcat与SSH启动区别 | Gridea</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://FreshStudent.github.io/favicon.ico?v=1560740807263">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="http://FreshStudent.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://FreshStudent.github.io">
+        <img src="http://FreshStudent.github.io/images/avatar.png?v=1560740807263" class="site-logo">
+        <h1 class="site-title">Gridea</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="http://FreshStudent.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Jenkins启动tomcat与SSH启动区别</h2>
+            <div class="post-date">2018-08-21</div>
+            
+            <div class="post-content">
+              <h1 id="jenkins启动tomcat与ssh启动区别">Jenkins启动tomcat与SSH启动区别</h1>
+<blockquote>
+<p>自动构建的Jenkins利用push over ssh 插件，将生成好的war包，远程发布到服务器中，并且利用bin/startup.sh启动Tomcat，发现Tomcat启动了(6-7s),正常加载项目后是需要10s左右的启动时间，但是项目却没有成功。</p>
+</blockquote>
+<h4 id="启动失败时候的tomcat信息">启动失败时候的Tomcat信息：</h4>
+<pre><code class="language-java">
+[samp@tset-flow2 ~]$ ps -ef|grep 19011
+samp     22930     1  7 09:53 ?        00:00:14 /usr/bin/java -Djava.util.logging.config.file=/u01/samp/soft/apache/tomcats/tomcat-balance-19011/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms512m -Xmx2048m -Djava.endorsed.dirs=/u01/samp/soft/apache/tomcats/tomcat-balance-19011/endorsed -classpath /u01/samp/soft/apache/tomcats/tomcat-balance-19011/bin/bootstrap.jar:/u01/samp/soft/apache/tomcats/tomcat-balance-19011/bin/tomcat-juli.jar -Dcatalina.base=/u01/samp/soft/apache/tomcats/tomcat-balance-19011 -Dcatalina.home=/u01/samp/soft/apache/tomcats/tomcat-balance-19011 -Djava.io.tmpdir=/u01/samp/soft/apache/tomcats/tomcat-balance-19011/temp org.apache.catalina.startup.Bootstrap start
+samp     23041 16786  0 09:56 pts/0    00:00:00 grep 19011
+</code></pre>
+<blockquote>
+<p>做了以下验证步骤：</p>
+</blockquote>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2412094"> ssh进入tomcat的bin目录下手动重启Tomcat --&gt; 原来项目A（jdk1.8）可以正常启动。  【<strong>排除shell脚本问题</strong><label class="task-list-item-label" for="task-item-2412094"> ssh进入tomcat的bin目录下手动重启Tomcat --> 原来项目A（jdk1.8）可以正常启动。  【**排除shell脚本问题**】</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5062164"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --&gt; 项目可以正常启动。   【<strong>排除tomcat配置问题</strong><label class="task-list-item-label" for="task-item-5062164"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --> 项目可以正常启动。   【**排除tomcat配置问题**】</label></li>
+</ul>
+<h4 id="排除了shell脚本-tomcat配置问题那估计就是环境问题了">排除了shell脚本、tomcat配置问题，那估计就是环境问题了？</h4>
+<blockquote>
+<p>Tomcat没有报错，但是项目却启动不起来，于是根据启动的信息，检查一下jdk版本</p>
+</blockquote>
+<pre><code>[samp@tset-flow2 ~]$ /usr/bin/java -version
+java version &quot;1.7.0_45&quot;
+OpenJDK Runtime Environment (rhel-2.4.3.3.el6-x86_64 u45-b15)
+OpenJDK 64-Bit Server VM (build 24.45-b08, mixed mode)
+
+</code></pre>
+<blockquote>
+<p>发现失败时候，tomcat加载的jdk是1.7版本的。</p>
+</blockquote>
+<h4 id="手动启动成功的tomcat信息">手动启动成功的tomcat信息</h4>
+<pre><code>[samp@tset-flow2 bin]$ ps -ef|grep 19011
+samp     23083     1 43 09:57 pts/0    00:00:43 /opt/java/bin/java -Djava.util.logging.config.file=/u01/samp/soft/apache/tomcats/tomcat-balance-19011/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms512m -Xmx2048m -Djava.endorsed.dirs=/u01/samp/soft/apache/tomcats/tomcat-balance-19011/endorsed -classpath /u01/samp/soft/apache/tomcats/tomcat-balance-19011/bin/bootstrap.jar:/u01/samp/soft/apache/tomcats/tomcat-balance-19011/bin/tomcat-juli.jar -Dcatalina.base=/u01/samp/soft/apache/tomcats/tomcat-balance-19011 -Dcatalina.home=/u01/samp/soft/apache/tomcats/tomcat-balance-19011 -Djava.io.tmpdir=/u01/samp/soft/apache/tomcats/tomcat-balance-19011/temp org.apache.catalina.startup.Bootstrap start
+</code></pre>
+<blockquote>
+<p>Tomcat+项目成功启动。根据启动的信息，检查一下jdk版本</p>
+</blockquote>
+<pre><code>[samp@tset-flow2 bin]$ /opt/java/bin/java -version
+java version &quot;1.8.0_45&quot;
+Java(TM) SE Runtime Environment (build 1.8.0_45-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)
+</code></pre>
+<h4 id="上下文对比发现jenkins启动的tomcat-和-ssh启动的tomcat加载的jdk不一样">上下文对比，发现Jenkins启动的tomcat 和 ssh启动的tomcat加载的jdk不一样。</h4>
+<table>
+<thead>
+<tr>
+<th>启动方式</th>
+<th>加载jdk</th>
+<th>路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jenkins</td>
+<td>java version &quot;1.7.0_45&quot;</td>
+<td>/usr/bin/java -version</td>
+</tr>
+<tr>
+<td>ssh</td>
+<td>java version &quot;1.8.0_45&quot;</td>
+<td>/opt/java/bin/java -version</td>
+</tr>
+</tbody>
+</table>
+<h3 id="难道jenkins启动和tomcat启动加载的jdk环境变量不一致">难道Jenkins启动和tomcat启动加载的jdk环境变量不一致？</h3>
+<p>是的！</p>
+<p><a href="https://blog.csdn.net/leshami/article/details/77198412">Linux 登陆shell，交互shell以及环境变量读取顺序</a></p>
+<hr>
+<h3 id="验证一下想法">验证一下想法：</h3>
+<blockquote>
+<p>直接指定Tomcat启动jdk版本，因为原项目A（jdk1.8）是需要启动jdk1.8的，而Jenkins是启动的jdk是默认的1.7。</p>
+</blockquote>
+<p><a href="https://www.cnblogs.com/xu-dong/p/6429301.html">Linux jdk安装多个版本并进行切换</a></p>
+<h4 id="目前使用的是17的jdk估计jenkins读取的是这里的配置">目前使用的是1.7的jdk，估计Jenkins读取的是这里的配置：</h4>
+<pre><code>[samp@tset-flow2 bin]$ alternatives --config java
+
+There are 3 programs which provide 'java'.
+
+  Selection    Command
+-----------------------------------------------
+*+ 1           /usr/lib/jvm/jre-1.7.0-openjdk.x86_64/bin/java
+   2           /usr/lib/jvm/jre-1.6.0-openjdk.x86_64/bin/java
+   3           /usr/lib/jvm/jre-1.5.0-gcj/bin/java
+
+</code></pre>
+<h4 id="而ssh读取的是全局变量的">而ssh读取的是全局变量的</h4>
+<pre><code>vi  /etc/profile 
+</code></pre>
+<h5 id="注意此文件配置的java_home-path">注意此文件配置的JAVA_HOME、PATH</h5>
+<pre><code>export JAVA_HOME=/opt/java
+export PATH=$JAVA_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+</code></pre>
+<h2 id="解决方案">解决方案</h2>
+<blockquote>
+<p>既然此Tomcat运行的项目A是依赖于JDK1.8的，那么配置tomcat的启动依赖的jdk即可</p>
+</blockquote>
+<pre><code>vi /u01/samp/soft/apache/tomcats/tomcat-xxxxx-19011/bin/catalina.sh
+</code></pre>
+<h5 id="catalinash-文件修改位置制定jdk18的路径">catalina.sh 文件修改位置，制定jdk1.8的路径：</h5>
+<blockquote>
+<p>添加export JAVA_HOME=/opt/java、export JRE_HOME=/opt/java</p>
+</blockquote>
+<pre><code class="language-java">export JAVA_HOME=/opt/java
+export JRE_HOME=/opt/java
+JAVA_OPTS=&quot;-Xms512m -Xmx2048m&quot;
+.....略.....
+</code></pre>
+<p>{% asset_img java_home.png JAVA_HOME位置 %}
+至此完毕！</p>
+<hr>
+<p>参考链接：</p>
+<p><a href="https://www.cnblogs.com/xu-dong/p/6429301.html">Linux jdk安装多个版本并进行切换</a></p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="http://FreshStudent.github.io/tag/jenkins" class="tag">
+                    Jenkins
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="http://FreshStudent.github.io/post/购买搬瓦工vps">
+                  <h3 class="post-title">
+                    购买搬瓦工vps
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>BulletsNote | Gridea</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://FreshStudent.github.io/favicon.ico?v=1560740807263">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="http://FreshStudent.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://FreshStudent.github.io">
+        <img src="http://FreshStudent.github.io/images/avatar.png?v=1560740807263" class="site-logo">
+        <h1 class="site-title">Gridea</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="http://FreshStudent.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">BulletsNote</h2>
+            <div class="post-date">2018-08-23</div>
+            
+            <div class="post-content">
+              <h1 id="子弹笔记使用教程">子弹笔记使用教程</h1>
+<h3 id="概述步骤">概述步骤：</h3>
+<ol>
+<li>将所有任务列出来（包括临时插入的）。</li>
+<li>根据任务情况，填写对应的符号。</li>
+<li>一段时间后，更新相应的任务状态。</li>
+</ol>
+<h3 id="任务场景">任务场景：</h3>
+<blockquote>
+<p>早上上班的时候，W总说需要写一份gitflow的工作流程，用于代码的自动化构建。网上买的新的机械键盘今天到了，很高兴。打开Idea继续开发之前安排的用户管理功能。项目经理说，有一个JSP页面需要优先开发，要安排时间做。<br>
+中午的时候，总公司发邮件需要开发人员参加下个月12号的技能培训。<br>
+下午的时候，好兄弟告诉我，他准备求婚了，是一件高兴的事情。
+15点开会《代码审查技巧》小憩的时候，回忆起今天上班的时候刷手机的时候，看到了一个java的新技术Spring，想研究一下。<br>
+下班后，和同事聊天的时候，他说了一句：“机会都是留给有准备的人的”，觉得这句话说得很对，触发我的思考了。 手机没话费了，马上用WX充了100块。</p>
+</blockquote>
+<p>总结一下，以上一天内发生了什么事情：</p>
+<ul>
+<li>w总安排我写一个Gitflow的工作流程</li>
+<li>新买的机械键盘到了</li>
+<li>继续开发用户管理的功能</li>
+<li>JSP需求需要优先开发</li>
+<li>下个月12号参加公司的培训</li>
+<li>好兄弟准备求婚了</li>
+<li>《代码审查技巧》心得、会议记录</li>
+<li>JAVA的新技术Spring想研究</li>
+<li>机会是留给有准备的人的。</li>
+<li>手机充话费</li>
+</ul>
+<h4 id="对以上事情做一个归类">对以上事情做一个归类：</h4>
+<h5 id="不能马上完成的需要持续一段过程的">不能马上完成的，需要持续一段过程的：</h5>
+<ul>
+<li>w总安排我写一个Gitflow的工作流程</li>
+<li>继续开发用户管理的功能</li>
+<li>JSP需求需要优先开发</li>
+<li>《代码审查技巧》心得、会议记录</li>
+</ul>
+<h5 id="将来要做的事情">将来要做的事情</h5>
+<ul>
+<li>下个月参加公司的培训</li>
+<li>JAVA的新技术Spring想研究</li>
+</ul>
+<h5 id="马上就做好的">马上就做好的</h5>
+<ul>
+<li>手机充话费</li>
+</ul>
+<h5 id="促进自己思考的事情-句子或者别的">促进自己思考的事情、句子或者别的</h5>
+<ul>
+<li>机会是留给有准备的人的。</li>
+</ul>
+<h5 id="发生的一些事件">发生的一些事件</h5>
+<ul>
+<li>新买的键盘到了</li>
+<li>好兄弟准备求婚了</li>
+</ul>
+<hr>
+<p>引入子弹笔记管理：
+步骤：<br>
+一、先将要做的任务全部列出来</p>
+<ul>
+<li>w总安排我写一个Gitflow的工作流程</li>
+<li>新买的机械键盘到了</li>
+<li>继续开发用户管理的功能</li>
+<li>JSP需求需要优先开发</li>
+<li>下个月12号参加公司的培训</li>
+<li>好兄弟准备求婚了</li>
+<li>《代码审查技巧》心得、会议记录</li>
+<li>JAVA的新技术Spring想研究</li>
+<li>机会是留给有准备的人的。</li>
+<li>手机充话费</li>
+</ul>
+<p>引入子弹笔记符号管理：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th style="text-align:left">内容</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">•</td>
+<td style="text-align:left">任务初始状态</td>
+<td style="text-align:left">最初记录任务的初始符号</td>
+</tr>
+<tr>
+<td style="text-align:center">X</td>
+<td style="text-align:left">完成的任务，需要标记为X</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;</td>
+<td style="text-align:left">任务迁移（任务持续）</td>
+<td style="text-align:left">不能马上完成的项目，持续一段时间的</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;</td>
+<td style="text-align:left">任务预约（任务将来完成）</td>
+<td style="text-align:left">较大任务，需要用项目分解才可做</td>
+</tr>
+<tr>
+<td style="text-align:center">O</td>
+<td style="text-align:left">事件是和日期相关的项目，无论是预约性质的（如“查理的生日”），又或者需要被完成的（如“签定租约”）。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">事实、想法、思考和观察</td>
+<td style="text-align:left">笔记是那些关于你想要记忆，但是不必马上完成的内容。这种子弹适合用于会议、演讲或课堂的笔记。</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td style="text-align:left">任务优先级别，标记在子弹的左边。这样你可以快速扫描到页面中最重要的项目。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">!</td>
+<td style="text-align:left">用感叹号来表示，通常可以使用在笔记的部分。关于那些伟大的想法，个人咒语和灵光一现的天才见解！</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">@</td>
+<td style="text-align:left">用眼睛符号来表示。表示这个部分的内容需要进一步的研究、资讯和发现。</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<p>根据子弹符号，以上一天的经历就变成：</p>
+<p>2018-08-22</p>
+<p><strong>&lt;-</strong>   W总安排我写一个Gitflow的工作流程（将来完成&lt;并且需要文档输出-的任务）<br>
+<strong>O</strong>  新买的机械键盘到了（发生的一些高兴的事件O）<br>
+<strong>&gt;</strong> *   继续开发用户管理的功能（持续的任务&gt;，优先级为*）<br>
+<strong>&gt;</strong> **    JSP需求需要优先开发（持续的任务 &gt;，优先级为**）<br>
+<strong>&lt;O</strong>  下个月12号参加公司的培训（将来完成&lt;,的事件O，需要添加到手机日历中，提醒自己的，可以用siri）<br>
+<strong>O</strong>  好兄弟准备求婚了（发生高兴的事件O）<br>
+<strong>&lt;-</strong> 《代码审查技巧》心得、会议记录（将来&lt;需要整理文档-的任务）<br>
+<strong>&lt;@</strong>  JAVA的新技术Spring想研究（将来&lt;需要研究的）<br>
+<strong>!</strong>  机会是留给有准备的人的（促进自己思考的！）<br>
+<strong>X</strong>  手机充话费（马上就可以完成的子任务X）</p>
+<hr>
+<p>2018-08-23</p>
+<p><strong>&gt;</strong>  继续开发用户管理的功能（只有一个任务，没有优先级）<br>
+X   JSP需求需要优先开发（任务完成X）</p>
+<p><strong>&lt;-</strong>   W总安排我写一个Gitflow的工作流程（将来完成&lt;并且需要文档输出-的任务）<br>
+<strong>&lt;-</strong> 《代码审查技巧》心得、会议记录（将来&lt;需要整理文档-的任务）<br>
+<strong>&lt;-</strong>  JAVA的新技术Spring想研究（将来&lt;需要整理文档-的任务）</p>
+<hr>
+<p>每天我就只需要建立我的子弹笔记，以一个月为单位，每天就根据任务的优先级来安排工作，有新工作来的也没关系，下班前修改一下当前的任务状态即可。</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="http://FreshStudent.github.io/post/JenkinsAndSSHStartTomcat">
+                  <h3 class="post-title">
+                    Jenkins启动tomcat与SSH启动区别
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
