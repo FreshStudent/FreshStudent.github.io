@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://FreshStudent.github.io</id>
     <title>To Be Top~</title>
-    <updated>2019-07-04T07:33:56.308Z</updated>
+    <updated>2019-07-24T10:00:25.583Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://FreshStudent.github.io"/>
     <link rel="self" href="http://FreshStudent.github.io/atom.xml"/>
@@ -16,7 +16,7 @@
         <link href="http://FreshStudent.github.io/post/jin-ri-wang-zhan-tui-jian-_-xiao-xi-lai-yuan">
         </link>
         <updated>2019-07-04T07:32:55.000Z</updated>
-        <content type="html"><![CDATA[<p>Macstories, theSweetSetup, MACsparky, iDB和MyProductiveMac
+        <content type="html"><![CDATA[<p>Macstories, theSweetSetup, MACsparky, iDB和MyProductiveMac<br>
 <em>【今日网站推荐】：</em> The macOS Automation</p>
 <p>• <em>网址：</em> https://www.macosxautomation.com</p>
 <p>• <em>网站领域：</em> macOS 自动化。</p>
@@ -103,7 +103,7 @@
 </blockquote>
 <h2 id="3-安装ss-sr">3 安装ss、sr</h2>
 <blockquote>
-<p>目前ss、sr的路径已经被隐藏了，所以需要登录官网直接点击连接跳转。
+<p>目前ss、sr的路径已经被隐藏了，所以需要登录官网直接点击连接跳转。<br>
 跳转以后可以实现<strong>一键安装</strong>。</p>
 </blockquote>
 <p>ss的url：<a href="https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks">搬瓦工Shadowsocks路径</a></p>
@@ -167,7 +167,7 @@
 <blockquote>
 <p>早上上班的时候，W总说需要写一份gitflow的工作流程，用于代码的自动化构建。网上买的新的机械键盘今天到了，很高兴。打开Idea继续开发之前安排的用户管理功能。项目经理说，有一个JSP页面需要优先开发，要安排时间做。<br>
 中午的时候，总公司发邮件需要开发人员参加下个月12号的技能培训。<br>
-下午的时候，好兄弟告诉我，他准备求婚了，是一件高兴的事情。
+下午的时候，好兄弟告诉我，他准备求婚了，是一件高兴的事情。<br>
 15点开会《代码审查技巧》小憩的时候，回忆起今天上班的时候刷手机的时候，看到了一个java的新技术Spring，想研究一下。<br>
 下班后，和同事聊天的时候，他说了一句：“机会都是留给有准备的人的”，觉得这句话说得很对，触发我的思考了。 手机没话费了，马上用WX充了100块。</p>
 </blockquote>
@@ -211,7 +211,7 @@
 <li>好兄弟准备求婚了</li>
 </ul>
 <hr>
-<p>引入子弹笔记管理：
+<p>引入子弹笔记管理：<br>
 步骤：<br>
 一、先将要做的任务全部列出来</p>
 <ul>
@@ -323,8 +323,8 @@ samp     23041 16786  0 09:56 pts/0    00:00:00 grep 19011
 <p>做了以下验证步骤：</p>
 </blockquote>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3967668"> ssh进入tomcat的bin目录下手动重启Tomcat --&gt; 原来项目A（jdk1.8）可以正常启动。  【<strong>排除shell脚本问题</strong><label class="task-list-item-label" for="task-item-3967668"> ssh进入tomcat的bin目录下手动重启Tomcat --> 原来项目A（jdk1.8）可以正常启动。  【**排除shell脚本问题**】</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8510651"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --&gt; 项目可以正常启动。   【<strong>排除tomcat配置问题</strong><label class="task-list-item-label" for="task-item-8510651"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --> 项目可以正常启动。   【**排除tomcat配置问题**】</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8175936"> ssh进入tomcat的bin目录下手动重启Tomcat --&gt; 原来项目A（jdk1.8）可以正常启动。  【<strong>排除shell脚本问题</strong><label class="task-list-item-label" for="task-item-8175936"> ssh进入tomcat的bin目录下手动重启Tomcat --> 原来项目A（jdk1.8）可以正常启动。  【**排除shell脚本问题**】</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2560173"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --&gt; 项目可以正常启动。   【<strong>排除tomcat配置问题</strong><label class="task-list-item-label" for="task-item-2560173"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --> 项目可以正常启动。   【**排除tomcat配置问题**】</label></li>
 </ul>
 <h4 id="排除了shell脚本-tomcat配置问题那估计就是环境问题了">排除了shell脚本、tomcat配置问题，那估计就是环境问题了？</h4>
 <blockquote>
@@ -417,7 +417,7 @@ export JRE_HOME=/opt/java
 JAVA_OPTS=&quot;-Xms512m -Xmx2048m&quot;
 .....略.....
 </code></pre>
-<p>{% asset_img java_home.png JAVA_HOME位置 %}
+<p>{% asset_img java_home.png JAVA_HOME位置 %}<br>
 至此完毕！</p>
 <hr>
 <p>参考链接：</p>
@@ -439,7 +439,7 @@ JAVA_OPTS=&quot;-Xms512m -Xmx2048m&quot;
 </blockquote>
 <h2 id="3-安装ss-sr">3 安装ss、sr</h2>
 <blockquote>
-<p>目前ss、sr的路径已经被隐藏了，所以需要登录官网直接点击连接跳转。
+<p>目前ss、sr的路径已经被隐藏了，所以需要登录官网直接点击连接跳转。<br>
 跳转以后可以实现<strong>一键安装</strong>。</p>
 </blockquote>
 <p>ss的url：<a href="https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks">搬瓦工Shadowsocks路径</a></p>
@@ -471,7 +471,7 @@ JAVA_OPTS=&quot;-Xms512m -Xmx2048m&quot;
 <p>打开终端，cd 到Jenkins的安装目录（即jenkins.war所在目录），如：D:\Program Files (x86)\Jenkins</p>
 </li>
 <li>
-<p>执行命令：
+<p>执行命令：<br>
 <code>java -jar jenkins.war --ajp13Port=-1 --httpPort=9999</code></p>
 </li>
 </ol>
@@ -479,32 +479,32 @@ JAVA_OPTS=&quot;-Xms512m -Xmx2048m&quot;
 <h3 id="1-集成gitlab插件">1、集成GitLab插件</h3>
 <p><strong>GitLab Plugin</strong><br>
 This plugin integrates GitLab to Jenkins by faking a GitLab CI Server.</p>
-<p>用于：
+<p>用于：<br>
 需要配置gitlib中的private Key等相关配置。</p>
 <h3 id="2-构建maven项目需要用到的插件">2、构建Maven项目需要用到的插件</h3>
 <p><strong>Maven Integration plugin</strong><br>
 This plug-in provides, for better and for worse, a deep integration of Jenkins and Maven: Automatic triggers between projects depending on SNAPSHOTs, automated configuration of various Jenkins publishers (Junit, ...).</p>
-<p>用于：
+<p>用于：<br>
 指向本地的相关maven所在，用于打包命令。</p>
 <h3 id="3-发布远程war包的将war包发送到远程tomcat中">3、发布远程war包的，将war包发送到远程Tomcat中</h3>
 <blockquote>
 <p>【注意！！！！！！！！】这种方法已经弃用，因为tomcat的自动发布功能经常出现故障，导致发布失败。</p>
 </blockquote>
-<p><s><strong>Deploy to container Plugin</strong></s>
-<s>This plugin allows you to deploy a war to a container after a successful build.
+<p><s><strong>Deploy to container Plugin</strong></s><br>
+<s>This plugin allows you to deploy a war to a container after a successful build.<br>
 Glassfish 3.x remote deployment</s></p>
-<p><s>目的：</s>
+<p><s>目的：</s><br>
 <s>指定jenkins服务器中的war包路径，通过配置tomcat目录下的tomcat-users.xml文件可以实现远程发布war包到指定路径。但是这里有一个问题，需要启动远程tomcat才可以成功提交，觉得这种方式不是很靠谱，想换一种基于shell命令的方式进行的项目部署。</s></p>
 <h3 id="4-将本地war包上传到远端服务器然后执行shell脚本">4、将本地war包上传到远端服务器，然后执行shell脚本</h3>
 <p><strong>Publish over SSH</strong></p>
 <h3 id="5-远程运行shell脚本">5、远程运行shell脚本</h3>
-<p>SSH
+<p>SSH<br>
 配置在远程tomcat中可以执行的shell脚本命令</p>
 <h2 id="三-相关步骤">三、相关步骤</h2>
 <h3 id="31-jenkins启动">3.1 jenkins启动</h3>
 <ol>
 <li>
-<p>启动jenkins
+<p>启动jenkins<br>
 由于我是使用homebrew来安装jenkins的，需要在终端中输入代码：</p>
 <p><code>shell brew info jenkins</code></p>
 </li>
@@ -529,19 +529,19 @@ Glassfish 3.x remote deployment</s></p>
 <ul>
 <li>
 <p>SSH remote hosts<br>
-配置远端SSH连接相关参数
-填写相关参数后，需要点击“check connection”按钮检查是否能成功连通。
+配置远端SSH连接相关参数<br>
+填写相关参数后，需要点击“check connection”按钮检查是否能成功连通。<br>
 <img src="http://FreshStudent.github.io/post-images/SSHremotehostsSetting.png" alt="配置远端SSH连接相关参数"></p>
 </li>
 <li>
 <p>Gitlab<br>
-Gitlib相关参数配置
-这一步需要填写gitLib中的相关参数，复制过来。
+Gitlib相关参数配置<br>
+这一步需要填写gitLib中的相关参数，复制过来。<br>
 <img src="http://FreshStudent.github.io/post-images/GitlabSetting.png" alt="配置gitLib中的相关参数"></p>
 </li>
 <li>
 <p>Publish over SSH<br>
-利用SSH，将文件复制到远程服务器特定文件夹中，并且可以执行自定义shell脚本。
+利用SSH，将文件复制到远程服务器特定文件夹中，并且可以执行自定义shell脚本。<br>
 <img src="http://FreshStudent.github.io/post-images/publishOverSSHSetting.png" alt="利用SSH，将文件复制到远程服务器特定文件夹中，并且可以执行自定义shell脚本"></p>
 </li>
 </ul>
@@ -554,7 +554,7 @@ Gitlib相关参数配置
 <img src="http://FreshStudent.github.io/post-images/MavenSetting.png" alt="配置打包gitlib代码的相关命令"></li>
 </ul>
 <ol start="3">
-<li>管理插件：添加、删除、禁用或启用Jenkins功能扩展插件。
+<li>管理插件：添加、删除、禁用或启用Jenkins功能扩展插件。<br>
 使用的插件：</li>
 </ol>
 <ul>
@@ -780,11 +780,11 @@ removeBackUpFiles
 <h3 id="查找博客对应的ip用于映射">查找博客对应的IP，用于映射</h3>
 <p><img src="http://FreshStudent.github.io/post-images/findGitHubIOIpAddress.png" alt="查找gitHubIO中对应的IP地址"></p>
 <h3 id="域名解析">域名解析</h3>
-<p><img src="http://FreshStudent.github.io/post-images/aliyunSiteToYourWebStep1.png" alt="将域名与GitHub捆绑起来">
+<p><img src="http://FreshStudent.github.io/post-images/aliyunSiteToYourWebStep1.png" alt="将域名与GitHub捆绑起来"><br>
 <img src="http://FreshStudent.github.io/post-images/aliyunSiteToYourWebStep2.png" alt="将域名与GitHub捆绑起来"></p>
 <h3 id="github的io项目中捆绑域名">gitHub的IO项目中捆绑域名</h3>
-<p><img src="http://FreshStudent.github.io/post-images/aliyunGitHubSetSiteStep1.png" alt="将域名与GitHub捆绑起来">
-<img src="http://FreshStudent.github.io/post-images/aliyunGitHubSetSiteStep2.png" alt="将域名与GitHub捆绑起来">
+<p><img src="http://FreshStudent.github.io/post-images/aliyunGitHubSetSiteStep1.png" alt="将域名与GitHub捆绑起来"><br>
+<img src="http://FreshStudent.github.io/post-images/aliyunGitHubSetSiteStep2.png" alt="将域名与GitHub捆绑起来"><br>
 在本地Hexo文件夹source中创建CNAME（Linux 命令： touch CNAME）文件，注意该文件名没有后缀，内容是刚申请的域名。</p>
 <pre><code>Linux code ：touch CNAME
 </code></pre>

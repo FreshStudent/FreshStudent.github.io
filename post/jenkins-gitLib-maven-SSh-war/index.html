@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="http://FreshStudent.github.io/favicon.ico?v=1562225593570">
+<link rel="shortcut icon" href="http://FreshStudent.github.io/favicon.ico?v=1563962423723">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="http://FreshStudent.github.io/styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="http://FreshStudent.github.io">
-        <img src="http://FreshStudent.github.io/images/avatar.png?v=1562225593570" class="site-logo">
+        <img src="http://FreshStudent.github.io/images/avatar.png?v=1563962423723" class="site-logo">
         <h1 class="site-title">To Be Top~</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -105,7 +105,7 @@
 <p>打开终端，cd 到Jenkins的安装目录（即jenkins.war所在目录），如：D:\Program Files (x86)\Jenkins</p>
 </li>
 <li>
-<p>执行命令：
+<p>执行命令：<br>
 <code>java -jar jenkins.war --ajp13Port=-1 --httpPort=9999</code></p>
 </li>
 </ol>
@@ -113,32 +113,32 @@
 <h3 id="1-集成gitlab插件">1、集成GitLab插件</h3>
 <p><strong>GitLab Plugin</strong><br>
 This plugin integrates GitLab to Jenkins by faking a GitLab CI Server.</p>
-<p>用于：
+<p>用于：<br>
 需要配置gitlib中的private Key等相关配置。</p>
 <h3 id="2-构建maven项目需要用到的插件">2、构建Maven项目需要用到的插件</h3>
 <p><strong>Maven Integration plugin</strong><br>
 This plug-in provides, for better and for worse, a deep integration of Jenkins and Maven: Automatic triggers between projects depending on SNAPSHOTs, automated configuration of various Jenkins publishers (Junit, ...).</p>
-<p>用于：
+<p>用于：<br>
 指向本地的相关maven所在，用于打包命令。</p>
 <h3 id="3-发布远程war包的将war包发送到远程tomcat中">3、发布远程war包的，将war包发送到远程Tomcat中</h3>
 <blockquote>
 <p>【注意！！！！！！！！】这种方法已经弃用，因为tomcat的自动发布功能经常出现故障，导致发布失败。</p>
 </blockquote>
-<p><s><strong>Deploy to container Plugin</strong></s>
-<s>This plugin allows you to deploy a war to a container after a successful build.
+<p><s><strong>Deploy to container Plugin</strong></s><br>
+<s>This plugin allows you to deploy a war to a container after a successful build.<br>
 Glassfish 3.x remote deployment</s></p>
-<p><s>目的：</s>
+<p><s>目的：</s><br>
 <s>指定jenkins服务器中的war包路径，通过配置tomcat目录下的tomcat-users.xml文件可以实现远程发布war包到指定路径。但是这里有一个问题，需要启动远程tomcat才可以成功提交，觉得这种方式不是很靠谱，想换一种基于shell命令的方式进行的项目部署。</s></p>
 <h3 id="4-将本地war包上传到远端服务器然后执行shell脚本">4、将本地war包上传到远端服务器，然后执行shell脚本</h3>
 <p><strong>Publish over SSH</strong></p>
 <h3 id="5-远程运行shell脚本">5、远程运行shell脚本</h3>
-<p>SSH
+<p>SSH<br>
 配置在远程tomcat中可以执行的shell脚本命令</p>
 <h2 id="三-相关步骤">三、相关步骤</h2>
 <h3 id="31-jenkins启动">3.1 jenkins启动</h3>
 <ol>
 <li>
-<p>启动jenkins
+<p>启动jenkins<br>
 由于我是使用homebrew来安装jenkins的，需要在终端中输入代码：</p>
 <p><code>shell brew info jenkins</code></p>
 </li>
@@ -163,19 +163,19 @@ Glassfish 3.x remote deployment</s></p>
 <ul>
 <li>
 <p>SSH remote hosts<br>
-配置远端SSH连接相关参数
-填写相关参数后，需要点击“check connection”按钮检查是否能成功连通。
+配置远端SSH连接相关参数<br>
+填写相关参数后，需要点击“check connection”按钮检查是否能成功连通。<br>
 <img src="http://FreshStudent.github.io/post-images/SSHremotehostsSetting.png" alt="配置远端SSH连接相关参数"></p>
 </li>
 <li>
 <p>Gitlab<br>
-Gitlib相关参数配置
-这一步需要填写gitLib中的相关参数，复制过来。
+Gitlib相关参数配置<br>
+这一步需要填写gitLib中的相关参数，复制过来。<br>
 <img src="http://FreshStudent.github.io/post-images/GitlabSetting.png" alt="配置gitLib中的相关参数"></p>
 </li>
 <li>
 <p>Publish over SSH<br>
-利用SSH，将文件复制到远程服务器特定文件夹中，并且可以执行自定义shell脚本。
+利用SSH，将文件复制到远程服务器特定文件夹中，并且可以执行自定义shell脚本。<br>
 <img src="http://FreshStudent.github.io/post-images/publishOverSSHSetting.png" alt="利用SSH，将文件复制到远程服务器特定文件夹中，并且可以执行自定义shell脚本"></p>
 </li>
 </ul>
@@ -188,7 +188,7 @@ Gitlib相关参数配置
 <img src="http://FreshStudent.github.io/post-images/MavenSetting.png" alt="配置打包gitlib代码的相关命令"></li>
 </ul>
 <ol start="3">
-<li>管理插件：添加、删除、禁用或启用Jenkins功能扩展插件。
+<li>管理插件：添加、删除、禁用或启用Jenkins功能扩展插件。<br>
 使用的插件：</li>
 </ol>
 <ul>
