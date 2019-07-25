@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://FreshStudent.github.io</id>
     <title>To Be Top~</title>
-    <updated>2019-07-25T07:14:44.372Z</updated>
+    <updated>2019-07-25T07:19:35.766Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://FreshStudent.github.io"/>
     <link rel="self" href="http://FreshStudent.github.io/atom.xml"/>
@@ -19,10 +19,12 @@
         <content type="html"><![CDATA[<p>工作中用到的设备、技能、软件清单</p>
 <h2 id="硬件设备">硬件设备：</h2>
 <ul>
-<li>Mac Book Pro 13 inch 2016 8G 512G</li>
+<li>Mac Book Pro 13 inch</li>
 <li>Magic Mouse 2</li>
-<li>Filco 87 蓝牙无线双模 侧刻</li>
+<li>Filco 87 侧刻</li>
 <li>Iphone7Plus</li>
+<li>一台 历史久远的显示器</li>
+<li>乐歌升降桌</li>
 </ul>
 <h2 id="软件">软件：</h2>
 <h3 id="ios平台">ios平台：</h3>
@@ -86,8 +88,10 @@
 </ul>
 <h3 id="code管理">Code管理：</h3>
 <ul>
-<li>Git</li>
-<li>Svn</li>
+<li>Git：<br>
+Gitlib做的一个自动化构建流程，已经落地。利用Jenkins自动化发布，减少了之前很多手工操作的问题。</li>
+<li>Svn：<br>
+主要用于管理文档（虽然我已经很少用了，但是很多公司都在用）。</li>
 </ul>
 ]]></content>
     </entry>
@@ -404,8 +408,8 @@ samp     23041 16786  0 09:56 pts/0    00:00:00 grep 19011
 <p>做了以下验证步骤：</p>
 </blockquote>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2928629"> ssh进入tomcat的bin目录下手动重启Tomcat --&gt; 原来项目A（jdk1.8）可以正常启动。  【<strong>排除shell脚本问题</strong><label class="task-list-item-label" for="task-item-2928629"> ssh进入tomcat的bin目录下手动重启Tomcat --> 原来项目A（jdk1.8）可以正常启动。  【**排除shell脚本问题**】</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3350112"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --&gt; 项目可以正常启动。   【<strong>排除tomcat配置问题</strong><label class="task-list-item-label" for="task-item-3350112"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --> 项目可以正常启动。   【**排除tomcat配置问题**】</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3139219"> ssh进入tomcat的bin目录下手动重启Tomcat --&gt; 原来项目A（jdk1.8）可以正常启动。  【<strong>排除shell脚本问题</strong><label class="task-list-item-label" for="task-item-3139219"> ssh进入tomcat的bin目录下手动重启Tomcat --> 原来项目A（jdk1.8）可以正常启动。  【**排除shell脚本问题**】</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2488063"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --&gt; 项目可以正常启动。   【<strong>排除tomcat配置问题</strong><label class="task-list-item-label" for="task-item-2488063"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --> 项目可以正常启动。   【**排除tomcat配置问题**】</label></li>
 </ul>
 <h4 id="排除了shell脚本-tomcat配置问题那估计就是环境问题了">排除了shell脚本、tomcat配置问题，那估计就是环境问题了？</h4>
 <blockquote>
