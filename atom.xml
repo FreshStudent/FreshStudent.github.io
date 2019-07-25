@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://FreshStudent.github.io</id>
     <title>To Be Top~</title>
-    <updated>2019-07-24T10:00:25.583Z</updated>
+    <updated>2019-07-25T07:14:44.372Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://FreshStudent.github.io"/>
     <link rel="self" href="http://FreshStudent.github.io/atom.xml"/>
@@ -10,6 +10,87 @@
     <logo>http://FreshStudent.github.io/images/avatar.png</logo>
     <icon>http://FreshStudent.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, To Be Top~</rights>
+    <entry>
+        <title type="html"><![CDATA[技能清单]]></title>
+        <id>http://FreshStudent.github.io/post/ji-neng-qing-dan</id>
+        <link href="http://FreshStudent.github.io/post/ji-neng-qing-dan">
+        </link>
+        <updated>2019-07-25T06:43:32.000Z</updated>
+        <content type="html"><![CDATA[<p>工作中用到的设备、技能、软件清单</p>
+<h2 id="硬件设备">硬件设备：</h2>
+<ul>
+<li>Mac Book Pro 13 inch 2016 8G 512G</li>
+<li>Magic Mouse 2</li>
+<li>Filco 87 蓝牙无线双模 侧刻</li>
+<li>Iphone7Plus</li>
+</ul>
+<h2 id="软件">软件：</h2>
+<h3 id="ios平台">ios平台：</h3>
+<ul>
+<li>知乎：查找相对正规的解答的地方。</li>
+<li>B站：比较喜欢上面的一些纪录片。</li>
+<li>Omnifocus：Mac+ios的任务同步。</li>
+<li>有道云：Mac+ios同步。</li>
+<li>懒饭：想不到吃什么的时候会看看，学做菜。</li>
+</ul>
+<h3 id="mac平台">Mac平台：</h3>
+<ul>
+<li>Idea：很强大的，日常Java程序开发。</li>
+<li>有道云：用于存放一些个人心得、技巧、工作流程等。</li>
+<li>Tower：Git代码管理。</li>
+<li>Sublime Text 3：文本临时存放地点。</li>
+<li>Omnifocus：多项目管理，当生活、工作、个人各种项目都堆积在一起的时候，你需要一个比较强大的管理工具。</li>
+<li>Fantastical：轻量的提醒工具，很喜欢他的自然语言</li>
+<li>Navicat Premium：访问Oracle和Mysq用的客户端。</li>
+<li>Termius：远程SSH管理服务器的。</li>
+<li>Postman：调试接口用的软件，谁用谁知道。</li>
+<li>rdm：管理redis的客户端。</li>
+<li>Homebrew：终端中各种服务安装的利器。</li>
+<li>iterm：替换Mac自带终端的利器。</li>
+<li>Alfred：快速启动，替换了Mac原生的。</li>
+</ul>
+<h2 id="技能">技能：</h2>
+<h3 id="前端">前端：</h3>
+<ul>
+<li>JQuery：JSP页面中经常会用到。</li>
+<li>JavaScript：JSP页面中经常会用到。</li>
+<li>Html：JSP页面中经常会用到。</li>
+<li>Jsp：JSP页面中经常会用到。</li>
+<li>Ajax：异步请求，获得表单数据。</li>
+</ul>
+<h3 id="后端">后端：</h3>
+<ul>
+<li>Java：工作用到的语言。</li>
+<li>Rabbitmq：用于削峰，流量大的时候用mq来处理比较理想。</li>
+<li>Spring：整合各种技术的。</li>
+<li>Redis：中间件， 主要用于存放一些频繁访问数据库的操作。</li>
+<li>jetty：同一个项目，jetty比Tomcat快了不少。</li>
+</ul>
+<h3 id="db">DB：</h3>
+<ul>
+<li>MySql：基本的使用。</li>
+<li>Hibernate：老项目维护常见的额。</li>
+<li>Mybatis：目前主流的数据库中间件。</li>
+<li>SQLServer：老项目用的比较多。</li>
+</ul>
+<h3 id="linux">Linux：</h3>
+<ul>
+<li>log日志排查</li>
+<li>监控线程</li>
+<li>基本的Linux命令</li>
+</ul>
+<h3 id="自动化构建">自动化构建：</h3>
+<ul>
+<li>Jenkins：自动化构建Gitlib - Jenkins - Tomcat</li>
+<li>Gitlib</li>
+</ul>
+<h3 id="code管理">Code管理：</h3>
+<ul>
+<li>Git</li>
+<li>Svn</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[今日网站推荐_消息来源]]></title>
         <id>http://FreshStudent.github.io/post/jin-ri-wang-zhan-tui-jian-_-xiao-xi-lai-yuan</id>
@@ -323,8 +404,8 @@ samp     23041 16786  0 09:56 pts/0    00:00:00 grep 19011
 <p>做了以下验证步骤：</p>
 </blockquote>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8175936"> ssh进入tomcat的bin目录下手动重启Tomcat --&gt; 原来项目A（jdk1.8）可以正常启动。  【<strong>排除shell脚本问题</strong><label class="task-list-item-label" for="task-item-8175936"> ssh进入tomcat的bin目录下手动重启Tomcat --> 原来项目A（jdk1.8）可以正常启动。  【**排除shell脚本问题**】</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2560173"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --&gt; 项目可以正常启动。   【<strong>排除tomcat配置问题</strong><label class="task-list-item-label" for="task-item-2560173"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --> 项目可以正常启动。   【**排除tomcat配置问题**】</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2928629"> ssh进入tomcat的bin目录下手动重启Tomcat --&gt; 原来项目A（jdk1.8）可以正常启动。  【<strong>排除shell脚本问题</strong><label class="task-list-item-label" for="task-item-2928629"> ssh进入tomcat的bin目录下手动重启Tomcat --> 原来项目A（jdk1.8）可以正常启动。  【**排除shell脚本问题**】</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3350112"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --&gt; 项目可以正常启动。   【<strong>排除tomcat配置问题</strong><label class="task-list-item-label" for="task-item-3350112"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --> 项目可以正常启动。   【**排除tomcat配置问题**】</label></li>
 </ul>
 <h4 id="排除了shell脚本-tomcat配置问题那估计就是环境问题了">排除了shell脚本、tomcat配置问题，那估计就是环境问题了？</h4>
 <blockquote>
