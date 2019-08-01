@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://FreshStudent.github.io</id>
     <title>To Be Top~</title>
-    <updated>2019-08-01T09:31:15.878Z</updated>
+    <updated>2019-08-01T09:31:40.415Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://FreshStudent.github.io"/>
     <link rel="self" href="http://FreshStudent.github.io/atom.xml"/>
@@ -10,6 +10,65 @@
     <logo>http://FreshStudent.github.io/images/avatar.png</logo>
     <icon>http://FreshStudent.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, To Be Top~</rights>
+    <entry>
+        <title type="html"><![CDATA[2019-08-01]]></title>
+        <id>http://FreshStudent.github.io/post/2019-08-01</id>
+        <link href="http://FreshStudent.github.io/post/2019-08-01">
+        </link>
+        <updated>2019-08-01T03:34:10.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li>
+<h3 id="翻出去后的尴尬"><strong>翻出去后的尴尬</strong></h3>
+</li>
+</ul>
+<blockquote>
+<p>外面的世界很精彩，但是听、说、读、写的技能不足，世界再精彩也与你何干？</p>
+</blockquote>
+<p>酸酸乳后，发现很多国外的优秀的网站，也有一些论坛方面的信息，但是尴尬的是，自己不能很好的表达想法，特别是属于那种能看懂一部分（借着Google翻译可以大概看懂意思），要写出来的时候就很尴尬的境地。</p>
+<ul>
+<li>
+<h3 id="听-说-读-写临时的解决方案"><strong>听、说、读、写临时的解决方案</strong></h3>
+</li>
+</ul>
+<blockquote>
+<p>作为一名搬砖人员，首先想到的是利用网络工具来进行辅助</p>
+</blockquote>
+<p>看来这种情况短时间内是不能有很好的提高了，于是我做了以下两件事：</p>
+<p>1、B站看无字幕英文纪录片（自己感兴趣的），一方面练自己的听力，一方面学习一下外国人是如何表达的。</p>
+<p>2、想要表达的中文，先用google翻译成英文，然后用Grammary（插件免费）对翻译后的句子做润色，然后自己再通读一遍，感觉没有明显问题，就可以粘贴到指定位置了~</p>
+<p>3、看到比较优秀的外文PDF，需要翻译的话，可以先将大的pdf切割成2M/每个，然后利用网站进行翻译。<br>
+<a href="https://www.onlinedoctranslator.com">必备网址onlinedoctranslator</a></p>
+<ul>
+<li>
+<h3 id="对数字游牧很感兴趣"><strong>对数字游牧很感兴趣</strong></h3>
+</li>
+</ul>
+<blockquote>
+<p>Remote work 早就想了，这个种子在大学的时候就已经埋下，静待发芽！</p>
+</blockquote>
+<p>做了以下事情：</p>
+<ul>
+<li>
+<p>看完J大的个人网站<a href="https://jarodise.com/">jarodise</a>，参加了他的知识星球，然后进入组建的微信群（接触了很多digital nomad），也进入了响应的电报群。</p>
+</li>
+<li>
+<p>浏览了upwork、fiverr。</p>
+</li>
+<li>
+<p>用Google翻译耐着性子看完了J大知识星球推荐的Trello:<a href="https://trello.com/b/U9qsUJzn/how-to-become-location-independent-v20">how-to-become-location-independent-v20</a>。</p>
+</li>
+<li>
+<p>进入了reddit的群。</p>
+</li>
+<li>
+<p>进入了fb全球dn的群组。</p>
+</li>
+<li>
+<p>通过J大的微信群，添加了几个有趣的公众号。</p>
+</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[头像图标]]></title>
         <id>http://FreshStudent.github.io/post/tu-biao</id>
@@ -421,8 +480,8 @@ samp     23041 16786  0 09:56 pts/0    00:00:00 grep 19011
 <p>做了以下验证步骤：</p>
 </blockquote>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9633656"> ssh进入tomcat的bin目录下手动重启Tomcat --&gt; 原来项目A（jdk1.8）可以正常启动。  【<strong>排除shell脚本问题</strong><label class="task-list-item-label" for="task-item-9633656"> ssh进入tomcat的bin目录下手动重启Tomcat --> 原来项目A（jdk1.8）可以正常启动。  【**排除shell脚本问题**】</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1210825"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --&gt; 项目可以正常启动。   【<strong>排除tomcat配置问题</strong><label class="task-list-item-label" for="task-item-1210825"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --> 项目可以正常启动。   【**排除tomcat配置问题**】</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9217965"> ssh进入tomcat的bin目录下手动重启Tomcat --&gt; 原来项目A（jdk1.8）可以正常启动。  【<strong>排除shell脚本问题</strong><label class="task-list-item-label" for="task-item-9217965"> ssh进入tomcat的bin目录下手动重启Tomcat --> 原来项目A（jdk1.8）可以正常启动。  【**排除shell脚本问题**】</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3754554"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --&gt; 项目可以正常启动。   【<strong>排除tomcat配置问题</strong><label class="task-list-item-label" for="task-item-3754554"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --> 项目可以正常启动。   【**排除tomcat配置问题**】</label></li>
 </ul>
 <h4 id="排除了shell脚本-tomcat配置问题那估计就是环境问题了">排除了shell脚本、tomcat配置问题，那估计就是环境问题了？</h4>
 <blockquote>
@@ -858,39 +917,6 @@ removeTempUploadWarPkg
 #删除1天前上传的备份的war包
 removeBackUpFiles
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[域名映射博客]]></title>
-        <id>http://FreshStudent.github.io/post/域名</id>
-        <link href="http://FreshStudent.github.io/post/域名">
-        </link>
-        <updated>2018-05-03T06:20:09.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="域名映射关键步骤">域名映射关键步骤</h1>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="登录阿里云">登录阿里云</h3>
-<p><a href="https://wanwang.aliyun.com/?spm=5176.8142029.388261.277.a7236d3eP22Jis">相关Url:</a><br>
-<img src="http://FreshStudent.github.io/post-images/aliyunSearch.png" alt="打开阿里云域名"></p>
-<h3 id="搜索域名">搜索域名</h3>
-<p><img src="http://FreshStudent.github.io/post-images/aliyunSearchYouWant.png" alt="搜索你想要的域名"></p>
-<h3 id="购买域名">购买域名</h3>
-<p><img src="http://FreshStudent.github.io/post-images/aliyunBuy.png" alt="购买选中的域名"></p>
-<h3 id="查找博客对应的ip用于映射">查找博客对应的IP，用于映射</h3>
-<p><img src="http://FreshStudent.github.io/post-images/findGitHubIOIpAddress.png" alt="查找gitHubIO中对应的IP地址"></p>
-<h3 id="域名解析">域名解析</h3>
-<p><img src="http://FreshStudent.github.io/post-images/aliyunSiteToYourWebStep1.png" alt="将域名与GitHub捆绑起来"><br>
-<img src="http://FreshStudent.github.io/post-images/aliyunSiteToYourWebStep2.png" alt="将域名与GitHub捆绑起来"></p>
-<h3 id="github的io项目中捆绑域名">gitHub的IO项目中捆绑域名</h3>
-<p><img src="http://FreshStudent.github.io/post-images/aliyunGitHubSetSiteStep1.png" alt="将域名与GitHub捆绑起来"><br>
-<img src="http://FreshStudent.github.io/post-images/aliyunGitHubSetSiteStep2.png" alt="将域名与GitHub捆绑起来"><br>
-在本地Hexo文件夹source中创建CNAME（Linux 命令： touch CNAME）文件，注意该文件名没有后缀，内容是刚申请的域名。</p>
-<pre><code>Linux code ：touch CNAME
-</code></pre>
-<p><strong>ps：如果没有在本地source文件夹中创建CNAME文件，则每次提交（hexo g -d）后，域名映射会失效。</strong><br>
-<img src="http://FreshStudent.github.io/post-images/creatLocalCNAMEFile.png" alt="将域名与GitHub捆绑起来"></p>
-<blockquote>
-<p>Done！</p>
-</blockquote>
 ]]></content>
     </entry>
 </feed>
