@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://FreshStudent.github.io</id>
     <title>To Be Top~</title>
-    <updated>2019-08-01T09:31:40.415Z</updated>
+    <updated>2019-08-01T10:14:44.181Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://FreshStudent.github.io"/>
     <link rel="self" href="http://FreshStudent.github.io/atom.xml"/>
@@ -17,6 +17,141 @@
         </link>
         <updated>2019-08-01T03:34:10.000Z</updated>
         <content type="html"><![CDATA[<ul>
+<li>Article</li>
+<li>Menu</li>
+<li>Tag</li>
+<li>Theme</li>
+<li>Settings</li>
+<li>System</li>
+</ul>
+<p>PreviewSync Website</p>
+<p>New</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:left">Title</th>
+<th style="text-align:left">Status</th>
+<th style="text-align:left">Create Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">[ 2019-08-01](javascript:;)</td>
+<td style="text-align:left">Published</td>
+<td style="text-align:left">2019-08-01 11:34:10</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">[ 头像图标](javascript:;)</td>
+<td style="text-align:left">Published</td>
+<td style="text-align:left">2019-07-30 15:46:35</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">[ 技能清单](javascript:;)</td>
+<td style="text-align:left">Published</td>
+<td style="text-align:left">2019-07-25 14:43:32</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">[ 今日网站推荐_消息来源](javascript:;)</td>
+<td style="text-align:left">Published</td>
+<td style="text-align:left">2019-07-04 15:32:55</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">[ 购买搬瓦工vps](javascript:;)</td>
+<td style="text-align:left">Published</td>
+<td style="text-align:left">2019-06-17 10:53:39</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">[ Hello Gridea](javascript:;)</td>
+<td style="text-align:left">Published</td>
+<td style="text-align:left">2018-12-12 00:00:00</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">[ BulletsNote](javascript:;)</td>
+<td style="text-align:left">Published</td>
+<td style="text-align:left">2018-08-23 17:19:18</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">[ Jenkins启动tomcat与SSH启动区别](javascript:;)</td>
+<td style="text-align:left">Published</td>
+<td style="text-align:left">2018-08-21 14:20:09</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">[ 购买搬瓦工vps](javascript:;)</td>
+<td style="text-align:left">Published</td>
+<td style="text-align:left">2018-06-01 17:26:42</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">[ jenkins+gitLib+maven+SSh+war 自动化远程构建war包](javascript:;)</td>
+<td style="text-align:left">Published</td>
+<td style="text-align:left">2018-05-15 10:40:09</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li></li>
+<li>1</li>
+<li>2</li>
+<li></li>
+</ul>
+<p>Post SettingsBackSave as DraftSave</p>
+<p>You can insert a separate line <!-- more --> is the abstract separator identifier ( the content before this line is the abstract)</p>
+<pre><code>
+</code></pre>
+<pre><code>- ### **翻出去后的尴尬**
+
+&gt; 外面的世界很精彩，但是听、说、读、写的技能不足，世界再精彩也与你何干？
+
+酸酸乳后，发现很多国外的优秀的网站，也有一些论坛方面的信息，但是尴尬的是，用英文不能表达自己的想法，只能一个一个单词蹦出来，感觉自己是属于那种能看懂部分（借着Google翻译），要写出来时就尴尬的人。
+
+
+
+- ### **听、说、读、写临时的解决方案**
+
+&gt; 作为一名搬砖人员，首先想到利用网络工具来进行辅助
+
+英文不会写，这个情况估计短时间提高不聊，于是我做了以下两件事：
+
+1、B站，看无字幕英文纪录片（自己感兴趣的），好处：
+* 练自己的听力；
+* 学习一下外国人是如何表达的；
+* 培养自己看“生肉”的习惯。
+
+2、对于长篇的中文，我的做法是先用google翻译成英文，然后用Grammary（chrom插件免费）对翻译后英文句子润色，然后自己再通读一遍，感觉没有明显问题，就可以粘贴到指定位置了~
+
+3、看到比较优秀的外文PDF，需要翻译的话，可以先将大于2M的pdf切割成2M/每个，然后利用网站进行上传进行翻译。
+[必备网址onlinedoctranslator](https://www.onlinedoctranslator.com)
+
+- ### **对数字游牧很感兴趣**
+
+&gt; Remote work 这个种子在大学的时候就已经埋下，静待发芽！
+
+做了以下事情：
+
+- 看完J大的个人网站[jarodise](https://jarodise.com/)，参加了他的知识星球，然后进入组建的微信群（接触了很多digital nomad），也进入了J大建立的电报群。
+
+- 浏览了upwork、fiverr。
+
+- 用Google翻译耐着性子看完了J大知识星球推荐的Trello:[how-to-become-location-independent-v20](https://trello.com/b/U9qsUJzn/how-to-become-location-independent-v20)。
+
+- 进入了reddit的群。
+
+- 进入了facebook全球digital nomad的群组。
+
+- 通过J大的微信群，添加了几个有趣的公众号。
+
+</code></pre>
+<ul>
 <li>
 <h3 id="翻出去后的尴尬"><strong>翻出去后的尴尬</strong></h3>
 </li>
@@ -24,32 +159,37 @@
 <blockquote>
 <p>外面的世界很精彩，但是听、说、读、写的技能不足，世界再精彩也与你何干？</p>
 </blockquote>
-<p>酸酸乳后，发现很多国外的优秀的网站，也有一些论坛方面的信息，但是尴尬的是，自己不能很好的表达想法，特别是属于那种能看懂一部分（借着Google翻译可以大概看懂意思），要写出来的时候就很尴尬的境地。</p>
+<p>酸酸乳后，发现很多国外的优秀的网站，也有一些论坛方面的信息，但是尴尬的是，用英文不能表达自己的想法，只能一个一个单词蹦出来，感觉自己是属于那种能看懂部分（借着Google翻译），要写出来时就尴尬的人。</p>
 <ul>
 <li>
 <h3 id="听-说-读-写临时的解决方案"><strong>听、说、读、写临时的解决方案</strong></h3>
 </li>
 </ul>
 <blockquote>
-<p>作为一名搬砖人员，首先想到的是利用网络工具来进行辅助</p>
+<p>作为一名搬砖人员，首先想到利用网络工具来进行辅助</p>
 </blockquote>
-<p>看来这种情况短时间内是不能有很好的提高了，于是我做了以下两件事：</p>
-<p>1、B站看无字幕英文纪录片（自己感兴趣的），一方面练自己的听力，一方面学习一下外国人是如何表达的。</p>
-<p>2、想要表达的中文，先用google翻译成英文，然后用Grammary（插件免费）对翻译后的句子做润色，然后自己再通读一遍，感觉没有明显问题，就可以粘贴到指定位置了~</p>
-<p>3、看到比较优秀的外文PDF，需要翻译的话，可以先将大的pdf切割成2M/每个，然后利用网站进行翻译。<br>
-<a href="https://www.onlinedoctranslator.com">必备网址onlinedoctranslator</a></p>
+<p>英文不会写，这个情况估计短时间提高不聊，于是我做了以下两件事：</p>
+<p>1、B站，看无字幕英文纪录片（自己感兴趣的），好处：</p>
+<ul>
+<li>练自己的听力；</li>
+<li>学习一下外国人是如何表达的；</li>
+<li>培养自己看“生肉”的习惯。</li>
+</ul>
+<p>2、对于长篇的中文，我的做法是先用google翻译成英文，然后用Grammary（chrom插件免费）对翻译后英文句子润色，然后自己再通读一遍，感觉没有明显问题，就可以粘贴到指定位置了~</p>
+<p>3、看到比较优秀的外文PDF，需要翻译的话，可以先将大于2M的pdf切割成2M/每个，然后利用网站进行上传进行翻译。<br>
+<a href="https://www.onlinedoctranslator.com/">必备网址onlinedoctranslator</a></p>
 <ul>
 <li>
 <h3 id="对数字游牧很感兴趣"><strong>对数字游牧很感兴趣</strong></h3>
 </li>
 </ul>
 <blockquote>
-<p>Remote work 早就想了，这个种子在大学的时候就已经埋下，静待发芽！</p>
+<p>Remote work 这个种子在大学的时候就已经埋下，静待发芽！</p>
 </blockquote>
 <p>做了以下事情：</p>
 <ul>
 <li>
-<p>看完J大的个人网站<a href="https://jarodise.com/">jarodise</a>，参加了他的知识星球，然后进入组建的微信群（接触了很多digital nomad），也进入了响应的电报群。</p>
+<p>看完J大的个人网站<a href="https://jarodise.com/">jarodise</a>，参加了他的知识星球，然后进入组建的微信群（接触了很多digital nomad），也进入了J大建立的电报群。</p>
 </li>
 <li>
 <p>浏览了upwork、fiverr。</p>
@@ -61,10 +201,13 @@
 <p>进入了reddit的群。</p>
 </li>
 <li>
-<p>进入了fb全球dn的群组。</p>
+<p>进入了facebook全球digital nomad的群组。</p>
 </li>
 <li>
 <p>通过J大的微信群，添加了几个有趣的公众号。</p>
+</li>
+<li>
+<p>打算先从一个网站开始研究，贪多吃不下，研究透了一个，估计很多东西共同的吧？</p>
 </li>
 </ul>
 ]]></content>
@@ -168,84 +311,6 @@ Gitlib做的一个自动化构建流程，已经落地。利用Jenkins自动化�
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[今日网站推荐_消息来源]]></title>
-        <id>http://FreshStudent.github.io/post/jin-ri-wang-zhan-tui-jian-_-xiao-xi-lai-yuan</id>
-        <link href="http://FreshStudent.github.io/post/jin-ri-wang-zhan-tui-jian-_-xiao-xi-lai-yuan">
-        </link>
-        <updated>2019-07-04T07:32:55.000Z</updated>
-        <content type="html"><![CDATA[<p>Macstories, theSweetSetup, MACsparky, iDB和MyProductiveMac<br>
-<em>【今日网站推荐】：</em> The macOS Automation</p>
-<p>• <em>网址：</em> https://www.macosxautomation.com</p>
-<p>• <em>网站领域：</em> macOS 自动化。</p>
-<p>• <em>网站主笔：</em> Sal Soghoian，自动化专家、作家、音乐家，前苹果自动化技术产品经理，给 macOS 的 Photos、Mail、iWork、Automator 等几乎所有应用带去了自动化功能。</p>
-<p>• <em>文章风格：</em> The macOS Automation 涉及了 macOS 自动化的方方面面，从可视化的 Automator 到需要代码基础的 Script Editor。文章所用的工具几乎都是原生的（除了 Omni 系列），非常 hard core，可以帮读者掌握 macOS 系统级的自动化知识。</p>
-<p><em>• 文章示例：</em> AppleScript and Keynote https://iworkautomation.com/keynote/index.html 经常用办公软件的用户应该听说过 Office 里的「宏」，其实 iWork 也有自己的自动化功能。这篇关于 Keynote 的文章就讲解了如何通过脚本来快速、批量处理幻灯片中的图片、主题、表格，帮读者减少重复工作的压力。</p>
-<p><em>【今日网站推荐】Explained Visually</em></p>
-<p>• *网址：*http://setosa.io/ev/</p>
-<p>• *网站领域：*各种定理、定律的图解。</p>
-<p>• *网站主笔：*Victor Powell，Uber 高级软件工程师，Twitter 帐号 @vicapow。</p>
-<p>• *文章风格：*用可视化、可交互的模型，形象地解释数学、经济学和计算机等学科中的经典定理，即使非专业人士也能有一定的收获。</p>
-<p><em>文章示例：</em></p>
-<p>​		 :one: Markov Chains http://setosa.io/ev/markov-chains/ 马尔可夫链（Markov Chains）描述了一种随机过程，这篇文章中提供了一个可交互的模型，让你像上帝一样设定各个事件发生的概率。最后你还是会发现，已知「现在」的情况下，未来发生的事情并不受到过去影响。比如，Minja 周一到周五节食并不能阻止他周末和朋友出去吃大餐 :full_moon_with_face:</p>
-<p>​		 :two: Image Kernels http://setosa.io/ev/image-kernels/ 你可能常常在关于人工智能的文章里看到「卷积神经网络」，这篇文章就图解了其核心技术——图像内核技术（Image Kernels），这种技术可以识别出一张图像的主要部分。</p>
-<p><em>【今日网站推荐】The Sweet Setup 的 Newsletter</em></p>
-<p>• <em>网址：</em> https://thesweetsetup.com/newsletter/</p>
-<p>• <em>内容领域：</em> The Sweet Setup 因为它在苹果效率工具方面的文章而在圈内闻名，但是很多人忽视了它的 Newsletter。The Sweet Setup 的创始人 Shawn Blanc 笔下的文字非常的温润，使人感到非常亲近，这与圈内大多数迫切想在文章中显示自己主张的风格截然不同，读起来非常舒服。</p>
-<p>• <em>文章示例：</em> Goals versus systems（Hum 批注版）：这封邮件分析了目标和系统（方法）的关系。有目标的系统，能帮助你作出决定，并且有动力去迈出行动的第一步，当你迈出第一步之后，目标也会随之越来越清晰，帮助你作出更正确的决定，是一个良性循环；而有系统（方法）的目标，则能保证你接近目标的进度，并且习惯和自律还会给你带来愉悦感。 https://d.pr/f/ORkzgx • 现在加入他的 Newsletter 会获得一本他写的 Meaningful Productivity 电子书（PDF 版），写得也不错，很适合普通人，而且文字很平和，易读。</p>
-<p>【今日网站推荐】Jarodise 数字游民部落</p>
-<p>• 网址：https://jarodise.com • 网站领域：数字游民、远程工作、旅行攻略。</p>
-<p>• 网站主笔：Jarod，前非洲石油工程师，现为数字游民生活方式倡导者与践行者。雅思口语 8.5，国内数字游民圈名人。微信、Instagram 和 Twitter 账户都是 jarodise，知乎 ID Jarod Zhang。</p>
-<p>• 文章风格：Jarodise 的文章涉及领域很广，从远程工作、旅行攻略到智能硬件、操作系统、甚至个人品牌运营都有涉及，每一篇都是主笔 Jarod 的私人干货。文章主要为原创，但也有高质量的译作。</p>
-<p>• 文章示例：</p>
-<p>​		 :one: 数字游民(Digital Nomad)访谈 – 一个外企 IT 工程师缘何辞职到藏区卖起了山货？ https://jarodise.com/liujiewen/ 刘杰文，典型中国版数字游民，作家、探险者，现居藏区。文章记录了 Jarodise 对刘杰文的一次访谈，内容包括他入藏的心路历程以及目前的生活状态。像刘这样边远地区创业者的故事，是我们了解中国数字游民的好例子。</p>
-<p>​		 :two: 如何成为一名真正的世界公民 – 谈数字游民的长期签证策略 https://jarodise.com/becoming-a-perpetual-traveler-long-term-visa-strategies-for-chinese-citizens/ 文章介绍了很多旅行者、空中飞人都不知道的签证技巧，包括延长签证、学生权益、打工签等内容。即使你并不打算真正去环游世界，这份攻略也能为你的假期旅行签证提供简明的指导。 注：数字游民，指「通过互联网赚取高收入，在低物价水平的地方消费」的人。</p>
-<p><em>【今日网站推荐】Carryology</em></p>
-<p>• *网址：*http://www.carryology.com/</p>
-<p>• *网站领域：*各种包的图文和视频测评、包的使用和养护技巧、包里「装了啥」物品清单分享。</p>
-<p>• *文章风格：*文章不仅谈包本身，也提供了背负技巧、背包养护等周边内容。测评文章多全面而客观，除了图片和视频，还会附上一张打分表。关于这份打分表的依据，Carryology 也给出了相信的说明：http://www.carryology.com/how-we-score/</p>
-<p>• 文章示例：</p>
-<p>​		:one: A Beginner's Guide to Backpack Repair http://www.carryology.com/insights/insights-1/a-beginners-guide-to-backpack-repair/ 修理背包是一门古老的手艺，Carryology 用现代化的方法与工具让这一项工作更加简单。文章介绍了修补、加固和改装背包的一些基础操作，难度较低，所需工具与原料也易于获取，可以帮助有心人把自己的爱包呵护得更周到。</p>
-<p>​		:two: Road Tests :: Tom Bihn Synapse 25 http://www.carryology.com/bags/road-tests-tom-bihn-synapse-25/ 小众背包 Tom Bihn 的测评，从材质、做工、分层设计等封面对背包进行了评价。Carryology 测的背包也许不是你的菜，但是它提出的评价标准可以在你自行挑选背包时派上用场。</p>
-<p><em>【今日网站推荐】And now it's all this</em></p>
-<p>• 网址：http://www.leancrew.com/all-this/</p>
-<p>• 博客领域：macOS 和 iOS 自动化、科技评论。</p>
-<p>• 博客主笔：Dr.Drang，机械和土木工程师，macOS Power User，自动化高玩，在国外苹果圈名气很大。他的 Twitter 和 GitHub ID 也是 Dr.Drang。</p>
-<p>• 文章风格：And now it's all this 的文章排版很简陋，但是充满干货，有大量作者原创的自动化动作和脚本，并且讲解详细。不过文章用词较为晦涩，阅读起来需要一定的英文基础。</p>
-<p>• <em>文章示例：</em></p>
-<p>​		:one: Importing TextExpander snippets to Keyboard Maestro http://leancrew.com/all-this/2016/04/importing-textexpander-snippets-to-keyboard-maestro/ 介绍：去年 TextExpander 转为订阅制后，Dr.Drang 随即写了这篇从 TextExpander 迁移到 Keyboard Maestro 的详细教程，足以体现他作为一个 Power User 的效率。不过，不久后 Dr.Drang 又用回了 TextExpander，毕竟术业有专攻，工具也是如此。</p>
-<p>​		:two: iPad and Mac—the early years http://leancrew.com/all-this/2017/02/ipad-and-mac-the-early-years/ 介绍：除了效率工具，Dr.Drang 也写科技评论，但他并不热衷于追逐热点，这篇文章讨论了 iPad 和 Mac 在生产力上的区别，表现了作者的客观和理性。</p>
-<p>【今日网站推荐】iD 公社</p>
-<p>网址：http://www.hi-id.com/</p>
-<p>网站领域：工业设计、用户界面设计。</p>
-<p>网站主笔：Hi-iD，Twitter 和知乎 ID 均为 Hi-iD。前锤子科技设计师，擅长工业设计和用户界面设计。</p>
-<p>文章风格：每篇文章几乎都是洋洋洒洒的原创长文，推荐周末挑个时间坐下来慢慢读。</p>
-<p>文章示例：</p>
-<p>Apple &quot;无缝&quot;涉及之历程 http://www.hi-id.com/?p=3286 光滑圆润的 Apple Pencil、表面无接缝的 MacBook 充电器……文章从材料、工艺到用户体验，分析了苹果在「无缝」设计上的历程。</p>
-<p>Apple 那些&quot;无关紧要&quot;的设计改进 http://www.hi-id.com/?p=4239k Safari 图标中指针角度的调整、iPhone 保护套按钮材质的改变……文章从这些看似无关紧要的设计，带你看苹果对设计品质的追求。</p>
-<p><em>【今日网站推荐】</em> 这个控件叫什么 - 知乎专栏</p>
-<p>• <em>网址：</em> https://zhuanlan.zhihu.com/c_87416856</p>
-<p>• <em>专栏领域：</em> 界面设计、交互设计</p>
-<p>• <em>专栏主笔：</em> 龙爪槐守望者，交互设计师、猎豹移动产品运营，知乎 ID @龙爪槐守望者。</p>
-<p>• <em>文章风格：</em> 轻松的短小的科普文章，从我们都在用 App 入手，介绍一些控件的专业名称，还会挖一挖控件发展的历史，时不时还能看到一些「开脑洞」的控件设计。有趣的是，部分控件实在没有标准的名字，所以你可看到「这个控件可能叫……」这样的标题。</p>
-<p><em>文章示例：</em></p>
-<p>这个控件叫：Badge/徽标/小红点 https://zhuanlan.zhihu.com/p/26107887 iPhone 桌面图标右上角的提醒、微信朋友圈图标上的提示……这些让人目不转睛可能还会引发焦虑的红色圆形物体到底是什么？其实它们就是 Badge（徽标），一种表示有新内容或待处理事项的提醒形式。文章最后还介绍了 QQ 聊天中可以随手「拔掉」的「小红点」，看着就很痛快。</p>
-<p><em>【今日网站推荐】</em> Chronodex</p>
-<p>• <em>网址：</em> http://scription.typepad.com/blog/#.WwvwpS-B234</p>
-<p>• <em>网站领域：</em> 手帐、文具。 • <em>网站主笔：</em> Patrick Ng，香港文具爱好者，手帐高手。</p>
-<p>• <em>文章风格：</em> 文章介绍了大量的文具和使用技巧，并提供了免费的手帐模板下载。文具总体比较偏日系，装饰性较强。</p>
-<p><em>文章示例：</em> Scription: Scription Chronodex Weekly Planner Jan-Jun 2018 Released http://scription.typepad.com/blog/2017/12/scription-chronodex-weekly-planner-jan-jun-2018-released.html#.WwwZ0S-B234 文章介绍了一种适用于纸笔的周计划模板，可以给喜欢做纸笔记录的读者一些参考。不得不说，即使只看 Chronodex 的手绘示意图也很有意思。</p>
-<p><em>【今日网站推荐】</em> TED Ed （TED Education，TED 教育）Youtube 频道</p>
-<p>• <em>网址：</em> https://m.youtube.com/user/TEDEducation/videos</p>
-<p>• <em>内容领域：</em> TED Ed 是 TED（Technology, Entertainment, Design，技术、娱乐、 设计） 出品的科普项目，涵盖各个知识领域，每个都是 4、5 分钟左右的短视频。带有字幕。</p>
-<p>• <em>订阅方式：</em> 把上方 TED Ed 的网址粘贴到 Inoreader，就可以通过 RSS 对其进行订阅。</p>
-<p>• <em>视频推荐：</em> Barin Discoveries https://www.youtube.com/watch?v=WuyPuH9ojCE&amp;list=PLJicmE8fK0EgM1HDy0KsAunxlVxt1ALCS 这是 TED Ed 中关于大脑的一系列视频，包括学习多语言对大脑有什么益处、糖类如何影响大脑、压力如何影响大脑等。</p>
-<p><em>【今日网站推荐】</em> App Talk 还在四处搜罗 x-callback-ur 的你，不应该错过 App Talk。</p>
-<p>• <em>网址：</em> https://app-talk.com/</p>
-<p>• <em>网站领域：</em> iOS 自动化，x-callback-url</p>
-<p>• <em>网站特点：</em> 网站目前收录了 Bear、Drafts、Workflow 等知名效率工具的 x-callback-url（比较难得的是，VLC 播放器、iCab 浏览器等相对少见的 App 也位列其中），不同于这些应用官方的「支持文档」，App Talk 精选了各工具最实用的 x-callback-url，有用法说明，并用带颜色来表示你应该填写的部分，非常好懂。所有的 x-callback-url 都提供一键拷贝的按钮，便于你复制使用。 例如下图所示运行 Workflow的 x-callback-url，可以直接把文本传递给 Workflow。编辑部有一个自动生成文章微博简介的 Workflow，配合抓取最新文章的 IFTTT、再通个这个 x-callback-url ，就能大大减轻发微博的工作量。（视频效果可见文章 https://sspai.com/post/43439）</p>
-]]></content>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[购买搬瓦工vps]]></title>
         <id>http://FreshStudent.github.io/post/gou-mai-ban-wa-gong-vps</id>
         <link href="http://FreshStudent.github.io/post/gou-mai-ban-wa-gong-vps">
@@ -273,38 +338,6 @@ Gitlib做的一个自动化构建流程，已经落地。利用Jenkins自动化�
 <h2 id="5-谷歌浏览器安装-switchyomega">5 谷歌浏览器安装 SwitchyOmega</h2>
 <h3 id="51-下载插件的位置switchyomega">5.1 下载插件的位置：<a href="https://www.switchyomega.com/">SwitchyOmega</a></h3>
 <h3 id="52-下载插件后默认配置即可只要选择跟随系统即可">5.2 下载插件后，默认配置即可，只要选择跟随系统即可。</h3>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>http://FreshStudent.github.io/post/hello-gridea</id>
-        <link href="http://FreshStudent.github.io/post/hello-gridea">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="http://hvenotes.fehey.com/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>𝖶𝗂𝗇𝖽𝗈𝗐𝗌</strong> 或 <strong>𝖬𝖺𝖼𝖮𝖲</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
 ]]></content>
     </entry>
     <entry>
@@ -480,8 +513,8 @@ samp     23041 16786  0 09:56 pts/0    00:00:00 grep 19011
 <p>做了以下验证步骤：</p>
 </blockquote>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9217965"> ssh进入tomcat的bin目录下手动重启Tomcat --&gt; 原来项目A（jdk1.8）可以正常启动。  【<strong>排除shell脚本问题</strong><label class="task-list-item-label" for="task-item-9217965"> ssh进入tomcat的bin目录下手动重启Tomcat --> 原来项目A（jdk1.8）可以正常启动。  【**排除shell脚本问题**】</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3754554"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --&gt; 项目可以正常启动。   【<strong>排除tomcat配置问题</strong><label class="task-list-item-label" for="task-item-3754554"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --> 项目可以正常启动。   【**排除tomcat配置问题**】</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6034391"> ssh进入tomcat的bin目录下手动重启Tomcat --&gt; 原来项目A（jdk1.8）可以正常启动。  【<strong>排除shell脚本问题</strong><label class="task-list-item-label" for="task-item-6034391"> ssh进入tomcat的bin目录下手动重启Tomcat --> 原来项目A（jdk1.8）可以正常启动。  【**排除shell脚本问题**】</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6300884"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --&gt; 项目可以正常启动。   【<strong>排除tomcat配置问题</strong><label class="task-list-item-label" for="task-item-6300884"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --> 项目可以正常启动。   【**排除tomcat配置问题**】</label></li>
 </ul>
 <h4 id="排除了shell脚本-tomcat配置问题那估计就是环境问题了">排除了shell脚本、tomcat配置问题，那估计就是环境问题了？</h4>
 <blockquote>
@@ -606,7 +639,7 @@ JAVA_OPTS=&quot;-Xms512m -Xmx2048m&quot;
 <h4 id="411-mac-本地安装了一个ss的dmg版本">4.1.1 mac 本地安装了一个ss的dmg版本</h4>
 <h3 id="42-相关的github地址shadowsocks">4.2 相关的github地址：<a href="https://github.com/shadowsocks">shadowsocks</a></h3>
 <h4 id="421-可以开启pac模式就可以智能的动态上网了">4.2.1 可以开启PAC模式，就可以智能的动态上网了。</h4>
-<h2 id="5-谷歌浏览器安装-switchyomega">5 谷歌浏览器安装 SwitchyOmega</h2>
+<h2 id="~~5-谷歌浏览器安装-switchyomega-~~">~~5 谷歌浏览器安装 SwitchyOmega  ~~</h2>
 <h3 id="51-下载插件的位置switchyomega">5.1 下载插件的位置：<a href="https://www.switchyomega.com/">SwitchyOmega</a></h3>
 <h3 id="52-下载插件后默认配置即可只要选择跟随系统即可">5.2 下载插件后，默认配置即可，只要选择跟随系统即可。</h3>
 ]]></content>
@@ -917,6 +950,39 @@ removeTempUploadWarPkg
 #删除1天前上传的备份的war包
 removeBackUpFiles
 </code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[域名映射博客]]></title>
+        <id>http://FreshStudent.github.io/post/域名</id>
+        <link href="http://FreshStudent.github.io/post/域名">
+        </link>
+        <updated>2018-05-03T06:20:09.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="域名映射关键步骤">域名映射关键步骤</h1>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="登录阿里云">登录阿里云</h3>
+<p><a href="https://wanwang.aliyun.com/?spm=5176.8142029.388261.277.a7236d3eP22Jis">相关Url:</a><br>
+<img src="http://FreshStudent.github.io/post-images/aliyunSearch.png" alt="打开阿里云域名"></p>
+<h3 id="搜索域名">搜索域名</h3>
+<p><img src="http://FreshStudent.github.io/post-images/aliyunSearchYouWant.png" alt="搜索你想要的域名"></p>
+<h3 id="购买域名">购买域名</h3>
+<p><img src="http://FreshStudent.github.io/post-images/aliyunBuy.png" alt="购买选中的域名"></p>
+<h3 id="查找博客对应的ip用于映射">查找博客对应的IP，用于映射</h3>
+<p><img src="http://FreshStudent.github.io/post-images/findGitHubIOIpAddress.png" alt="查找gitHubIO中对应的IP地址"></p>
+<h3 id="域名解析">域名解析</h3>
+<p><img src="http://FreshStudent.github.io/post-images/aliyunSiteToYourWebStep1.png" alt="将域名与GitHub捆绑起来"><br>
+<img src="http://FreshStudent.github.io/post-images/aliyunSiteToYourWebStep2.png" alt="将域名与GitHub捆绑起来"></p>
+<h3 id="github的io项目中捆绑域名">gitHub的IO项目中捆绑域名</h3>
+<p><img src="http://FreshStudent.github.io/post-images/aliyunGitHubSetSiteStep1.png" alt="将域名与GitHub捆绑起来"><br>
+<img src="http://FreshStudent.github.io/post-images/aliyunGitHubSetSiteStep2.png" alt="将域名与GitHub捆绑起来"><br>
+在本地Hexo文件夹source中创建CNAME（Linux 命令： touch CNAME）文件，注意该文件名没有后缀，内容是刚申请的域名。</p>
+<pre><code>Linux code ：touch CNAME
+</code></pre>
+<p><strong>ps：如果没有在本地source文件夹中创建CNAME文件，则每次提交（hexo g -d）后，域名映射会失效。</strong><br>
+<img src="http://FreshStudent.github.io/post-images/creatLocalCNAMEFile.png" alt="将域名与GitHub捆绑起来"></p>
+<blockquote>
+<p>Done！</p>
+</blockquote>
 ]]></content>
     </entry>
 </feed>
