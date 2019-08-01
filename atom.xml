@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://FreshStudent.github.io</id>
     <title>To Be Top~</title>
-    <updated>2019-08-01T10:16:48.668Z</updated>
+    <updated>2019-08-01T10:20:30.569Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://FreshStudent.github.io"/>
     <link rel="self" href="http://FreshStudent.github.io/atom.xml"/>
@@ -17,141 +17,6 @@
         </link>
         <updated>2019-08-01T03:34:10.000Z</updated>
         <content type="html"><![CDATA[<ul>
-<li>Article</li>
-<li>Menu</li>
-<li>Tag</li>
-<li>Theme</li>
-<li>Settings</li>
-<li>System</li>
-</ul>
-<p>PreviewSync Website</p>
-<p>New</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center"></th>
-<th style="text-align:left">Title</th>
-<th style="text-align:left">Status</th>
-<th style="text-align:left">Create Time</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:left">[ 2019-08-01](javascript:;)</td>
-<td style="text-align:left">Published</td>
-<td style="text-align:left">2019-08-01 11:34:10</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:left">[ 头像图标](javascript:;)</td>
-<td style="text-align:left">Published</td>
-<td style="text-align:left">2019-07-30 15:46:35</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:left">[ 技能清单](javascript:;)</td>
-<td style="text-align:left">Published</td>
-<td style="text-align:left">2019-07-25 14:43:32</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:left">[ 今日网站推荐_消息来源](javascript:;)</td>
-<td style="text-align:left">Published</td>
-<td style="text-align:left">2019-07-04 15:32:55</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:left">[ 购买搬瓦工vps](javascript:;)</td>
-<td style="text-align:left">Published</td>
-<td style="text-align:left">2019-06-17 10:53:39</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:left">[ Hello Gridea](javascript:;)</td>
-<td style="text-align:left">Published</td>
-<td style="text-align:left">2018-12-12 00:00:00</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:left">[ BulletsNote](javascript:;)</td>
-<td style="text-align:left">Published</td>
-<td style="text-align:left">2018-08-23 17:19:18</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:left">[ Jenkins启动tomcat与SSH启动区别](javascript:;)</td>
-<td style="text-align:left">Published</td>
-<td style="text-align:left">2018-08-21 14:20:09</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:left">[ 购买搬瓦工vps](javascript:;)</td>
-<td style="text-align:left">Published</td>
-<td style="text-align:left">2018-06-01 17:26:42</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:left">[ jenkins+gitLib+maven+SSh+war 自动化远程构建war包](javascript:;)</td>
-<td style="text-align:left">Published</td>
-<td style="text-align:left">2018-05-15 10:40:09</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li></li>
-<li>1</li>
-<li>2</li>
-<li></li>
-</ul>
-<p>Post SettingsBackSave as DraftSave</p>
-<p>You can insert a separate line <!-- more --> is the abstract separator identifier ( the content before this line is the abstract)</p>
-<pre><code>
-</code></pre>
-<pre><code>- ### **翻出去后的尴尬**
-
-&gt; 外面的世界很精彩，但是听、说、读、写的技能不足，世界再精彩也与你何干？
-
-酸酸乳后，发现很多国外的优秀的网站，也有一些论坛方面的信息，但是尴尬的是，用英文不能表达自己的想法，只能一个一个单词蹦出来，感觉自己是属于那种能看懂部分（借着Google翻译），要写出来时就尴尬的人。
-
-
-
-- ### **听、说、读、写临时的解决方案**
-
-&gt; 作为一名搬砖人员，首先想到利用网络工具来进行辅助
-
-英文不会写，这个情况估计短时间提高不聊，于是我做了以下两件事：
-
-1、B站，看无字幕英文纪录片（自己感兴趣的），好处：
-* 练自己的听力；
-* 学习一下外国人是如何表达的；
-* 培养自己看“生肉”的习惯。
-
-2、对于长篇的中文，我的做法是先用google翻译成英文，然后用Grammary（chrom插件免费）对翻译后英文句子润色，然后自己再通读一遍，感觉没有明显问题，就可以粘贴到指定位置了~
-
-3、看到比较优秀的外文PDF，需要翻译的话，可以先将大于2M的pdf切割成2M/每个，然后利用网站进行上传进行翻译。
-[必备网址onlinedoctranslator](https://www.onlinedoctranslator.com)
-
-- ### **对数字游牧很感兴趣**
-
-&gt; Remote work 这个种子在大学的时候就已经埋下，静待发芽！
-
-做了以下事情：
-
-- 看完J大的个人网站[jarodise](https://jarodise.com/)，参加了他的知识星球，然后进入组建的微信群（接触了很多digital nomad），也进入了J大建立的电报群。
-
-- 浏览了upwork、fiverr。
-
-- 用Google翻译耐着性子看完了J大知识星球推荐的Trello:[how-to-become-location-independent-v20](https://trello.com/b/U9qsUJzn/how-to-become-location-independent-v20)。
-
-- 进入了reddit的群。
-
-- 进入了facebook全球digital nomad的群组。
-
-- 通过J大的微信群，添加了几个有趣的公众号。
-
-</code></pre>
-<ul>
 <li>
 <h3 id="翻出去后的尴尬"><strong>翻出去后的尴尬</strong></h3>
 </li>
@@ -513,8 +378,8 @@ samp     23041 16786  0 09:56 pts/0    00:00:00 grep 19011
 <p>做了以下验证步骤：</p>
 </blockquote>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1063883"> ssh进入tomcat的bin目录下手动重启Tomcat --&gt; 原来项目A（jdk1.8）可以正常启动。  【<strong>排除shell脚本问题</strong><label class="task-list-item-label" for="task-item-1063883"> ssh进入tomcat的bin目录下手动重启Tomcat --> 原来项目A（jdk1.8）可以正常启动。  【**排除shell脚本问题**】</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7517613"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --&gt; 项目可以正常启动。   【<strong>排除tomcat配置问题</strong><label class="task-list-item-label" for="task-item-7517613"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --> 项目可以正常启动。   【**排除tomcat配置问题**】</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9791145"> ssh进入tomcat的bin目录下手动重启Tomcat --&gt; 原来项目A（jdk1.8）可以正常启动。  【<strong>排除shell脚本问题</strong><label class="task-list-item-label" for="task-item-9791145"> ssh进入tomcat的bin目录下手动重启Tomcat --> 原来项目A（jdk1.8）可以正常启动。  【**排除shell脚本问题**】</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2991831"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --&gt; 项目可以正常启动。   【<strong>排除tomcat配置问题</strong><label class="task-list-item-label" for="task-item-2991831"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --> 项目可以正常启动。   【**排除tomcat配置问题**】</label></li>
 </ul>
 <h4 id="排除了shell脚本-tomcat配置问题那估计就是环境问题了">排除了shell脚本、tomcat配置问题，那估计就是环境问题了？</h4>
 <blockquote>
