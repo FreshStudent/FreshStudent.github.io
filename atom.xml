@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://FreshStudent.github.io</id>
     <title>To Be Top~</title>
-    <updated>2019-08-02T03:55:44.644Z</updated>
+    <updated>2019-08-02T04:00:29.064Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://FreshStudent.github.io"/>
     <link rel="self" href="http://FreshStudent.github.io/atom.xml"/>
@@ -10,23 +10,6 @@
     <logo>http://FreshStudent.github.io/images/avatar.png</logo>
     <icon>http://FreshStudent.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, To Be Top~</rights>
-    <entry>
-        <title type="html"><![CDATA[test]]></title>
-        <id>http://FreshStudent.github.io/post/test</id>
-        <link href="http://FreshStudent.github.io/post/test">
-        </link>
-        <updated>2019-08-02T03:45:49.000Z</updated>
-        <content type="html"><![CDATA[<p>test google an</p>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145004415-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-145004415-1');
-</script>]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[2019-08-01]]></title>
         <id>http://FreshStudent.github.io/post/2019-08-01</id>
@@ -198,6 +181,15 @@ Gitlib做的一个自动化构建流程，已经落地。利用Jenkins自动化�
 <li>Svn：<br>
 主要用于管理文档（虽然我已经很少用了，但是很多公司都在用）。</li>
 </ul>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145004415-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-145004415-1');
+</script>
 ]]></content>
     </entry>
     <entry>
@@ -403,8 +395,8 @@ samp     23041 16786  0 09:56 pts/0    00:00:00 grep 19011
 <p>做了以下验证步骤：</p>
 </blockquote>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5405156"> ssh进入tomcat的bin目录下手动重启Tomcat --&gt; 原来项目A（jdk1.8）可以正常启动。  【<strong>排除shell脚本问题</strong><label class="task-list-item-label" for="task-item-5405156"> ssh进入tomcat的bin目录下手动重启Tomcat --> 原来项目A（jdk1.8）可以正常启动。  【**排除shell脚本问题**】</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5066463"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --&gt; 项目可以正常启动。   【<strong>排除tomcat配置问题</strong><label class="task-list-item-label" for="task-item-5066463"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --> 项目可以正常启动。   【**排除tomcat配置问题**】</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3767593"> ssh进入tomcat的bin目录下手动重启Tomcat --&gt; 原来项目A（jdk1.8）可以正常启动。  【<strong>排除shell脚本问题</strong><label class="task-list-item-label" for="task-item-3767593"> ssh进入tomcat的bin目录下手动重启Tomcat --> 原来项目A（jdk1.8）可以正常启动。  【**排除shell脚本问题**】</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7976674"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --&gt; 项目可以正常启动。   【<strong>排除tomcat配置问题</strong><label class="task-list-item-label" for="task-item-7976674"> 替换B项目（jdk1.7）到webapps目录下，Jenkins启动 --> 项目可以正常启动。   【**排除tomcat配置问题**】</label></li>
 </ul>
 <h4 id="排除了shell脚本-tomcat配置问题那估计就是环境问题了">排除了shell脚本、tomcat配置问题，那估计就是环境问题了？</h4>
 <blockquote>
@@ -502,6 +494,15 @@ JAVA_OPTS=&quot;-Xms512m -Xmx2048m&quot;
 <hr>
 <p>参考链接：</p>
 <p><a href="https://www.cnblogs.com/xu-dong/p/6429301.html">Linux jdk安装多个版本并进行切换</a></p>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145004415-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-145004415-1');
+</script>
 ]]></content>
     </entry>
     <entry>
@@ -873,6 +874,14 @@ removeBackUpFiles
 <blockquote>
 <p>Done！</p>
 </blockquote>
-]]></content>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145004415-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-145004415-1');
+</script>]]></content>
     </entry>
 </feed>
